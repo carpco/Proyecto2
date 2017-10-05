@@ -1,0 +1,197 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "led_external_connection_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led_external_connection_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led_external_connection_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led_external_connection_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led_external_connection_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led_external_connection_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led_external_connection_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led_external_connection_export[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg0_external_connection_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg0_external_connection_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg0_external_connection_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg0_external_connection_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg0_external_connection_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg0_external_connection_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg0_external_connection_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg0_external_connection_export[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg1_external_connection_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg1_external_connection_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg1_external_connection_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg1_external_connection_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg1_external_connection_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg1_external_connection_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg1_external_connection_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg1_external_connection_export[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg2_external_connection_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg2_external_connection_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg2_external_connection_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg2_external_connection_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg2_external_connection_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg2_external_connection_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg2_external_connection_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg2_external_connection_export[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg3_external_connection_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg3_external_connection_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg3_external_connection_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg3_external_connection_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg3_external_connection_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg3_external_connection_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg3_external_connection_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg3_external_connection_export[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_clk",
+					"strict" : false
+				},
+				{
+					"name" : "button_external_connection_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "switch_external_connection_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "button_external_connection_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "switch_external_connection_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "button_external_connection_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "button_external_connection_export[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

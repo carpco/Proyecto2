@@ -9,6 +9,14 @@
    categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
+   element button
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
    element clk
    {
       datum _sortIndex
@@ -52,7 +60,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
    }
@@ -73,7 +81,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
    }
@@ -94,7 +102,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
    }
@@ -115,7 +123,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
    }
@@ -136,7 +144,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
    }
@@ -157,7 +165,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
    }
@@ -178,7 +186,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
    }
@@ -211,6 +219,14 @@
          type = "String";
       }
    }
+   element uart
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -232,12 +248,18 @@
  <parameter name="timeStamp" value="0" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
+ <interface
+   name="button_external_connection"
+   internal="button.external_connection"
+   type="conduit"
+   dir="end" />
  <interface name="clk" internal="clk.clk_in" type="clock" dir="end" />
  <interface
    name="led_external_connection"
    internal="led.external_connection"
    type="conduit"
    dir="end" />
+ <interface name="reset" internal="clk.clk_in_reset" type="reset" dir="end" />
  <interface
    name="sseg0_external_connection"
    internal="sseg0.external_connection"
@@ -263,6 +285,20 @@
    internal="switch.external_connection"
    type="conduit"
    dir="end" />
+ <module name="button" kind="altera_avalon_pio" version="17.0" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="4" />
+ </module>
  <module name="clk" kind="clock_source" version="17.0" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
@@ -289,7 +325,7 @@
   <parameter name="dataAddrWidth" value="13" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='ram.s1' start='0x0' end='0x1000' type='altera_avalon_onchip_memory2.s1' /><slave name='cpu.debug_mem_slave' start='0x1000' end='0x1800' type='altera_nios2_gen2.debug_mem_slave' /><slave name='timer.s1' start='0x1800' end='0x1820' type='altera_avalon_timer.s1' /><slave name='sseg0.s1' start='0x1820' end='0x1830' type='altera_avalon_pio.s1' /><slave name='sseg1.s1' start='0x1830' end='0x1840' type='altera_avalon_pio.s1' /><slave name='sseg2.s1' start='0x1840' end='0x1850' type='altera_avalon_pio.s1' /><slave name='sseg3.s1' start='0x1850' end='0x1860' type='altera_avalon_pio.s1' /><slave name='switch.s1' start='0x1860' end='0x1870' type='altera_avalon_pio.s1' /><slave name='led.s1' start='0x1870' end='0x1880' type='altera_avalon_pio.s1' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='ram.s1' start='0x0' end='0x1000' type='altera_avalon_onchip_memory2.s1' /><slave name='cpu.debug_mem_slave' start='0x1000' end='0x1800' type='altera_nios2_gen2.debug_mem_slave' /><slave name='timer.s1' start='0x1800' end='0x1820' type='altera_avalon_timer.s1' /><slave name='sseg0.s1' start='0x1820' end='0x1830' type='altera_avalon_pio.s1' /><slave name='sseg1.s1' start='0x1830' end='0x1840' type='altera_avalon_pio.s1' /><slave name='sseg2.s1' start='0x1840' end='0x1850' type='altera_avalon_pio.s1' /><slave name='sseg3.s1' start='0x1850' end='0x1860' type='altera_avalon_pio.s1' /><slave name='switch.s1' start='0x1860' end='0x1870' type='altera_avalon_pio.s1' /><slave name='led.s1' start='0x1870' end='0x1880' type='altera_avalon_pio.s1' /><slave name='button.s1' start='0x1880' end='0x1890' type='altera_avalon_pio.s1' /><slave name='uart.avalon_jtag_slave' start='0x1890' end='0x1898' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -335,7 +371,7 @@
   <parameter name="instruction_master_high_performance_paddr_size" value="0" />
   <parameter name="instruction_master_paddr_base" value="0" />
   <parameter name="instruction_master_paddr_size" value="0" />
-  <parameter name="internalIrqMaskSystemInfo" value="1" />
+  <parameter name="internalIrqMaskSystemInfo" value="3" />
   <parameter name="io_regionbase" value="0" />
   <parameter name="io_regionsize" value="0" />
   <parameter name="master_addr_map" value="false" />
@@ -575,6 +611,30 @@
   <parameter name="timeoutPulseOutput" value="false" />
   <parameter name="watchdogPulse" value="2" />
  </module>
+ <module name="uart" kind="altera_avalon_jtag_uart" version="17.0" enabled="1">
+  <parameter name="allowMultipleConnections" value="false" />
+  <parameter name="avalonSpec" value="2.0" />
+  <parameter name="clkFreq" value="50000000" />
+  <parameter name="hubInstanceID" value="0" />
+  <parameter name="readBufferDepth" value="64" />
+  <parameter name="readIRQThreshold" value="8" />
+  <parameter name="simInputCharacterStream" value="" />
+  <parameter name="simInteractiveOptions">NO_INTERACTIVE_WINDOWS</parameter>
+  <parameter name="useRegistersForReadBuffer" value="false" />
+  <parameter name="useRegistersForWriteBuffer" value="false" />
+  <parameter name="useRelativePathForSimFile" value="false" />
+  <parameter name="writeBufferDepth" value="64" />
+  <parameter name="writeIRQThreshold" value="8" />
+ </module>
+ <connection
+   kind="avalon"
+   version="17.0"
+   start="cpu.data_master"
+   end="uart.avalon_jtag_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x1890" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
  <connection
    kind="avalon"
    version="17.0"
@@ -624,6 +684,11 @@
   <parameter name="baseAddress" value="0x1870" />
   <parameter name="defaultConnection" value="false" />
  </connection>
+ <connection kind="avalon" version="17.0" start="cpu.data_master" end="button.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x1880" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
  <connection
    kind="avalon"
    version="17.0"
@@ -650,9 +715,14 @@
  <connection kind="clock" version="17.0" start="clk.clk" end="sseg0.clk" />
  <connection kind="clock" version="17.0" start="clk.clk" end="switch.clk" />
  <connection kind="clock" version="17.0" start="clk.clk" end="led.clk" />
+ <connection kind="clock" version="17.0" start="clk.clk" end="button.clk" />
+ <connection kind="clock" version="17.0" start="clk.clk" end="uart.clk" />
  <connection kind="clock" version="17.0" start="clk.clk" end="ram.clk1" />
  <connection kind="interrupt" version="17.0" start="cpu.irq" end="timer.irq">
   <parameter name="irqNumber" value="0" />
+ </connection>
+ <connection kind="interrupt" version="17.0" start="cpu.irq" end="uart.irq">
+  <parameter name="irqNumber" value="1" />
  </connection>
  <connection kind="reset" version="17.0" start="clk.clk_reset" end="cpu.reset" />
  <connection kind="reset" version="17.0" start="clk.clk_reset" end="timer.reset" />
@@ -662,11 +732,8 @@
  <connection kind="reset" version="17.0" start="clk.clk_reset" end="sseg0.reset" />
  <connection kind="reset" version="17.0" start="clk.clk_reset" end="switch.reset" />
  <connection kind="reset" version="17.0" start="clk.clk_reset" end="led.reset" />
- <connection
-   kind="reset"
-   version="17.0"
-   start="cpu.debug_reset_request"
-   end="clk.clk_in_reset" />
+ <connection kind="reset" version="17.0" start="clk.clk_reset" end="button.reset" />
+ <connection kind="reset" version="17.0" start="clk.clk_reset" end="uart.reset" />
  <connection
    kind="reset"
    version="17.0"
