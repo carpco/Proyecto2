@@ -1,0 +1,1027 @@
+
+Proyecto_2.elf:     file format elf32-littlenios2
+Proyecto_2.elf
+architecture: nios2:r1, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x00000020
+
+Program Header:
+    LOAD off    0x00001000 vaddr 0x00000000 paddr 0x00000000 align 2**12
+         filesz 0x00000020 memsz 0x00000020 flags r-x
+    LOAD off    0x00001020 vaddr 0x00000020 paddr 0x00000020 align 2**12
+         filesz 0x000004a4 memsz 0x000004a4 flags r-x
+    LOAD off    0x000014c4 vaddr 0x000004c4 paddr 0x000004e0 align 2**12
+         filesz 0x0000001c memsz 0x0000001c flags rw-
+    LOAD off    0x000014fc vaddr 0x000004fc paddr 0x000004fc align 2**12
+         filesz 0x00000000 memsz 0x00000014 flags rw-
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .entry        00000020  00000000  00000000  00001000  2**5
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .exceptions   00000000  00000020  00000020  000014e0  2**0
+                  CONTENTS
+  2 .text         000004a4  00000020  00000020  00001020  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .rodata       00000000  000004c4  000004fc  000014e0  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .rwdata       0000001c  000004c4  000004e0  000014c4  2**2
+                  CONTENTS, ALLOC, LOAD, DATA, SMALL_DATA
+  5 .bss          00000014  000004fc  000004fc  000014fc  2**2
+                  ALLOC, SMALL_DATA
+  6 .ram          00000000  00000510  00000510  000014e0  2**0
+                  CONTENTS
+  7 .comment      00000023  00000000  00000000  000014e0  2**0
+                  CONTENTS, READONLY
+  8 .debug_aranges 00000108  00000000  00000000  00001508  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_info   0000081d  00000000  00000000  00001610  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_abbrev 0000040b  00000000  00000000  00001e2d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_line   000004c1  00000000  00000000  00002238  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_frame  0000012c  00000000  00000000  000026fc  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_str    0000045e  00000000  00000000  00002828  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_loc    00000021  00000000  00000000  00002c86  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_alt_sim_info 00000010  00000000  00000000  00002ca8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 16 .debug_ranges 00000078  00000000  00000000  00002cb8  2**3
+                  CONTENTS, READONLY, DEBUGGING
+ 17 .thread_model 00000003  00000000  00000000  00003a7a  2**0
+                  CONTENTS, READONLY
+ 18 .cpu          00000003  00000000  00000000  00003a7d  2**0
+                  CONTENTS, READONLY
+ 19 .qsys         00000001  00000000  00000000  00003a80  2**0
+                  CONTENTS, READONLY
+ 20 .simulation_enabled 00000001  00000000  00000000  00003a81  2**0
+                  CONTENTS, READONLY
+ 21 .stderr_dev   00000004  00000000  00000000  00003a82  2**0
+                  CONTENTS, READONLY
+ 22 .stdin_dev    00000004  00000000  00000000  00003a86  2**0
+                  CONTENTS, READONLY
+ 23 .stdout_dev   00000004  00000000  00000000  00003a8a  2**0
+                  CONTENTS, READONLY
+ 24 .sopc_system_name 00000007  00000000  00000000  00003a8e  2**0
+                  CONTENTS, READONLY
+ 25 .quartus_project_dir 00000027  00000000  00000000  00003a95  2**0
+                  CONTENTS, READONLY
+ 26 .jdi          000035a5  00000000  00000000  00003abc  2**0
+                  CONTENTS, READONLY
+ 27 .sopcinfo     0005b969  00000000  00000000  00007061  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .entry	00000000 .entry
+00000020 l    d  .exceptions	00000000 .exceptions
+00000020 l    d  .text	00000000 .text
+000004c4 l    d  .rodata	00000000 .rodata
+000004c4 l    d  .rwdata	00000000 .rwdata
+000004fc l    d  .bss	00000000 .bss
+00000510 l    d  .ram	00000000 .ram
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    d  .debug_alt_sim_info	00000000 .debug_alt_sim_info
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    df *ABS*	00000000 ../Proyecto_2_bsp//obj/HAL/src/crt0.o
+00000058 l       .text	00000000 alt_after_alt_main
+00000000 l    df *ABS*	00000000 hello_world_small.c
+00000000 l    df *ABS*	00000000 alt_load.c
+00000000 l    df *ABS*	00000000 alt_main.c
+00000000 l    df *ABS*	00000000 alt_sys_init.c
+00000000 l    df *ABS*	00000000 alt_dcache_flush_all.c
+00000000 l    df *ABS*	00000000 alt_icache_flush_all.c
+00000000 l    df *ABS*	00000000 altera_nios2_gen2_irq.c
+000004d8 g     O .rwdata	00000004 TIMER
+000004d0 g     O .rwdata	00000004 SSEG1
+00000464 g     F .text	0000002c alt_main
+000004e0 g       *ABS*	00000000 __flash_rwdata_start
+000004bc g     F .text	00000008 altera_nios2_gen2_irq_init
+00000000 g     F .entry	0000000c __reset
+00000020 g       *ABS*	00000000 __flash_exceptions_start
+00000508 g     O .bss	00000004 alt_argv
+000084c4 g       *ABS*	00000000 _gp
+00000000 g       *ABS*	00000000 __alt_mem_ram
+00000510 g       *ABS*	00000000 __bss_end
+000004cc g     O .rwdata	00000004 SWITCHES
+000004b4 g     F .text	00000004 alt_dcache_flush_all
+00000500 g     O .bss	00000004 segundos
+000004e0 g       *ABS*	00000000 __ram_rwdata_end
+000004c4 g       *ABS*	00000000 __ram_rodata_end
+00000510 g       *ABS*	00000000 end
+00001000 g       *ABS*	00000000 __alt_stack_pointer
+000004c4 g     O .rwdata	00000004 BUTTON
+00000020 g     F .text	0000003c _start
+000004b0 g     F .text	00000004 alt_sys_init
+000004c4 g       *ABS*	00000000 __ram_rwdata_start
+000004c4 g       *ABS*	00000000 __ram_rodata_start
+00000510 g       *ABS*	00000000 __alt_stack_base
+000004fc g     O .bss	00000004 segundos2
+000004fc g       *ABS*	00000000 __bss_start
+0000005c g     F .text	00000328 main
+00000504 g     O .bss	00000004 alt_envp
+000004c8 g     O .rwdata	00000004 LEDS
+000004c4 g       *ABS*	00000000 __flash_rodata_start
+00000490 g     F .text	00000020 alt_irq_init
+0000050c g     O .bss	00000004 alt_argc
+00000020 g       *ABS*	00000000 __ram_exceptions_start
+000004d4 g     O .rwdata	00000004 SSEG0
+000004e0 g       *ABS*	00000000 _edata
+00000510 g       *ABS*	00000000 _end
+00000020 g       *ABS*	00000000 __ram_exceptions_end
+00001000 g       *ABS*	00000000 __alt_data_end
+000004dc g     O .rwdata	00000004 uart
+0000000c g       .entry	00000000 _exit
+000004b8 g     F .text	00000004 alt_icache_flush_all
+00000384 g     F .text	000000e0 alt_load
+
+
+
+Disassembly of section .entry:
+
+00000000 <__reset>:
+ * Jump to the _start entry point in the .text section if reset code
+ * is allowed or if optimizing for RTL simulation.
+ */
+#if defined(ALT_ALLOW_CODE_AT_RESET) || defined(ALT_SIM_OPTIMIZE)
+    /* Jump to the _start entry point in the .text section. */
+    movhi r1, %hi(_start)
+   0:	00400034 	movhi	at,0
+    ori r1, r1, %lo(_start)
+   4:	08400814 	ori	at,at,32
+    jmp r1
+   8:	0800683a 	jmp	at
+
+0000000c <_exit>:
+	...
+
+Disassembly of section .text:
+
+00000020 <_start>:
+
+    /*
+     * Now that the caches are initialized, set up the stack pointer and global pointer.
+     * The values provided by the linker are assumed to be correctly aligned.
+     */
+    movhi sp, %hi(__alt_stack_pointer)
+  20:	06c00034 	movhi	sp,0
+    ori sp, sp, %lo(__alt_stack_pointer)
+  24:	dec40014 	ori	sp,sp,4096
+    movhi gp, %hi(_gp)
+  28:	06800034 	movhi	gp,0
+    ori gp, gp, %lo(_gp)
+  2c:	d6a13114 	ori	gp,gp,33988
+ */
+#ifndef ALT_SIM_OPTIMIZE
+    /* Log that the BSS is about to be cleared. */
+    ALT_LOG_PUTS(alt_log_msg_bss)
+
+    movhi r2, %hi(__bss_start)
+  30:	00800034 	movhi	r2,0
+    ori r2, r2, %lo(__bss_start)
+  34:	10813f14 	ori	r2,r2,1276
+
+    movhi r3, %hi(__bss_end)
+  38:	00c00034 	movhi	r3,0
+    ori r3, r3, %lo(__bss_end)
+  3c:	18c14414 	ori	r3,r3,1296
+
+    beq r2, r3, 1f
+  40:	10c00326 	beq	r2,r3,50 <_start+0x30>
+
+0:
+    stw zero, (r2)
+  44:	10000015 	stw	zero,0(r2)
+    addi r2, r2, 4
+  48:	10800104 	addi	r2,r2,4
+    bltu r2, r3, 0b
+  4c:	10fffd36 	bltu	r2,r3,44 <_start+0x24>
+     * section aren't defined until alt_load() has been called).
+     */
+    mov   et, zero
+#endif
+
+    call alt_load
+  50:	00003840 	call	384 <alt_load>
+
+    /* Log that alt_main is about to be called. */
+    ALT_LOG_PUTS(alt_log_msg_alt_main)
+
+    /* Call the C entry point. It should never return. */
+    call alt_main
+  54:	00004640 	call	464 <alt_main>
+
+00000058 <alt_after_alt_main>:
+
+    /* Wait in infinite loop in case alt_main does return. */
+alt_after_alt_main:
+    br alt_after_alt_main
+  58:	003fff06 	br	58 <alt_after_alt_main>
+
+0000005c <main>:
+char * BUTTON = (int*) 0x1880;
+int segundos = 0;
+int segundos2 = 0;
+
+int main()
+{ 
+  5c:	defff904 	addi	sp,sp,-28
+  60:	dfc00615 	stw	ra,24(sp)
+  64:	dd000415 	stw	r20,16(sp)
+  68:	dcc00315 	stw	r19,12(sp)
+  6c:	dc400115 	stw	r17,4(sp)
+			*SSEG0 = 0x40;
+			segundos = 0;
+			segundos2 = segundos2 + 1;
+			break;
+	  }
+	  switch (segundos2){ /*deco Tiempo decenas a 7-segmentos*/
+  70:	04c00034 	movhi	r19,0
+		  *LEDS=0xf0;
+	  }
+	  else{
+	  segundos = segundos + 1;
+	  *LEDS=*BUTTON;
+	  switch (segundos){ /*deco Tiempo a 7-segmentos*/
+  74:	02800074 	movhi	r10,1
+  78:	038000b4 	movhi	r14,2
+  7c:	03c00234 	movhi	r15,8
+  80:	07c00074 	movhi	ra,1
+  84:	04400074 	movhi	r17,1
+		  			*SSEG0 = 0x40;
+		  			segundos = 0;
+		  			segundos2 = segundos2 + 1;
+		  			break;
+		  	  }
+		  	  switch (segundos2){ /*deco Tiempo decenas a 7-segmentos*/
+  88:	05000034 	movhi	r20,0
+char * BUTTON = (int*) 0x1880;
+int segundos = 0;
+int segundos2 = 0;
+
+int main()
+{ 
+  8c:	dc800215 	stw	r18,8(sp)
+  90:	dc000015 	stw	r16,0(sp)
+  94:	dd400515 	stw	r21,20(sp)
+  while (1){
+	  if(*SWITCHES==0x6){/*Config hora*/
+  98:	02c00184 	movi	r11,6
+		  			*SSEG1 = 0x40;
+		  			segundos2 = 0;
+		  			break;
+		  	  }
+	  }
+	  else if(*SWITCHES==0x5){/*Config alarma*/
+  9c:	04800144 	movi	r18,5
+		  *LEDS=0xf0;
+	  }
+	  else{
+	  segundos = segundos + 1;
+	  *LEDS=*BUTTON;
+	  switch (segundos){ /*deco Tiempo a 7-segmentos*/
+  a0:	013a9814 	movui	r4,60000
+			*SSEG0 = 0x40;
+			segundos = 0;
+			segundos2 = segundos2 + 1;
+			break;
+	  }
+	  switch (segundos2){ /*deco Tiempo decenas a 7-segmentos*/
+  a4:	9cc0cb04 	addi	r19,r19,812
+			break;
+		  case 5:
+			*SSEG1 = 0x92;
+			break;
+		  case 6:
+			*SSEG1 = 0x40;
+  a8:	00c01004 	movi	r3,64
+			break;
+		  case 4:
+			*SSEG1 = 0x99;
+			break;
+		  case 5:
+			*SSEG1 = 0x92;
+  ac:	017fe484 	movi	r5,-110
+			break;
+		  case 3:
+			*SSEG1 = 0xb0;
+			break;
+		  case 4:
+			*SSEG1 = 0x99;
+  b0:	01bfe644 	movi	r6,-103
+			break;
+		  case 2:
+			*SSEG1 = 0xa4;
+			break;
+		  case 3:
+			*SSEG1 = 0xb0;
+  b4:	01ffec04 	movi	r7,-80
+			break;
+		  case 1:
+			*SSEG1 = 0xf9;
+			break;
+		  case 2:
+			*SSEG1 = 0xa4;
+  b8:	023fe904 	movi	r8,-92
+	  switch (segundos2){ /*deco Tiempo decenas a 7-segmentos*/
+		  case 0:
+			*SSEG1 = 0x40;
+			break;
+		  case 1:
+			*SSEG1 = 0xf9;
+  bc:	027ffe44 	movi	r9,-7
+			break;
+		  case 500000:
+			*SSEG0 = 0x92;
+			break;
+		  case 60000:
+			*SSEG0 = 0x02;
+  c0:	03000084 	movi	r12,2
+		  *LEDS=0xf0;
+	  }
+	  else{
+	  segundos = segundos + 1;
+	  *LEDS=*BUTTON;
+	  switch (segundos){ /*deco Tiempo a 7-segmentos*/
+  c4:	5297e404 	addi	r10,r10,24464
+			break;
+		  case 80000:
+			*SSEG0 = 0x00;
+			break;
+		  case 90000:
+			*SSEG0 = 0x10;
+  c8:	03400404 	movi	r13,16
+		  *LEDS=0xf0;
+	  }
+	  else{
+	  segundos = segundos + 1;
+	  *LEDS=*BUTTON;
+	  switch (segundos){ /*deco Tiempo a 7-segmentos*/
+  cc:	73a1a804 	addi	r14,r14,-31072
+  d0:	7be84804 	addi	r15,r15,-24288
+  d4:	ffc45c04 	addi	ra,ra,4464
+			break;
+		  case 60000:
+			*SSEG0 = 0x02;
+			break;
+		  case 70000:
+			*SSEG0 = 0xf8;
+  d8:	043ffe04 	movi	r16,-8
+		  *LEDS=0xf0;
+	  }
+	  else{
+	  segundos = segundos + 1;
+	  *LEDS=*BUTTON;
+	  switch (segundos){ /*deco Tiempo a 7-segmentos*/
+  dc:	8c4e2004 	addi	r17,r17,14464
+		  			*SSEG0 = 0x40;
+		  			segundos = 0;
+		  			segundos2 = segundos2 + 1;
+		  			break;
+		  	  }
+		  	  switch (segundos2){ /*deco Tiempo decenas a 7-segmentos*/
+  e0:	a500cb04 	addi	r20,r20,812
+int segundos2 = 0;
+
+int main()
+{ 
+  while (1){
+	  if(*SWITCHES==0x6){/*Config hora*/
+  e4:	d0a00217 	ldw	r2,-32760(gp)
+  e8:	15400007 	ldb	r21,0(r2)
+  ec:	d0a00117 	ldw	r2,-32764(gp)
+  f0:	aac0461e 	bne	r21,r11,20c <main+0x1b0>
+		  *LEDS=0x0f;
+  f4:	054003c4 	movi	r21,15
+  f8:	15400005 	stb	r21,0(r2)
+		  segundos = 0;
+		  segundos2 = 0;
+		  if(*BUTTON==0xf){
+  fc:	d0a00017 	ldw	r2,-32768(gp)
+int main()
+{ 
+  while (1){
+	  if(*SWITCHES==0x6){/*Config hora*/
+		  *LEDS=0x0f;
+		  segundos = 0;
+ 100:	d0200f15 	stw	zero,-32708(gp)
+		  segundos2 = 0;
+ 104:	d0200e15 	stw	zero,-32712(gp)
+		  if(*BUTTON==0xf){
+ 108:	15400007 	ldb	r21,0(r2)
+ 10c:	008003c4 	movi	r2,15
+ 110:	a880021e 	bne	r21,r2,11c <main+0xc0>
+			  segundos=segundos+1;
+ 114:	00800044 	movi	r2,1
+ 118:	d0a00f15 	stw	r2,-32708(gp)
+		  }
+		  switch (segundos){ /*deco Tiempo a 7-segmentos*/
+ 11c:	d0a00f17 	ldw	r2,-32708(gp)
+ 120:	11002626 	beq	r2,r4,1bc <main+0x160>
+ 124:	20801016 	blt	r4,r2,168 <main+0x10c>
+ 128:	05538804 	movi	r21,20000
+ 12c:	15401d26 	beq	r2,r21,1a4 <main+0x148>
+ 130:	a8800616 	blt	r21,r2,14c <main+0xf0>
+ 134:	10001826 	beq	r2,zero,198 <main+0x13c>
+ 138:	0549c404 	movi	r21,10000
+ 13c:	15402e1e 	bne	r2,r21,1f8 <main+0x19c>
+		  		  case 0:
+		  			*SSEG0 = 0x40;
+		  			break;
+		  		  case 10000:
+		  			*SSEG0 = 0xf9;
+ 140:	d0a00417 	ldw	r2,-32752(gp)
+ 144:	12400005 	stb	r9,0(r2)
+		  			break;
+ 148:	00002b06 	br	1f8 <main+0x19c>
+		  segundos = 0;
+		  segundos2 = 0;
+		  if(*BUTTON==0xf){
+			  segundos=segundos+1;
+		  }
+		  switch (segundos){ /*deco Tiempo a 7-segmentos*/
+ 14c:	055d4c04 	movi	r21,30000
+ 150:	15401726 	beq	r2,r21,1b0 <main+0x154>
+ 154:	05671014 	movui	r21,40000
+ 158:	1540271e 	bne	r2,r21,1f8 <main+0x19c>
+		  			break;
+		  		  case 30000:
+		  			*SSEG0 = 0xb0;
+		  			break;
+		  		  case 40000:
+		  			*SSEG0 = 0x99;
+ 15c:	d0a00417 	ldw	r2,-32752(gp)
+ 160:	11800005 	stb	r6,0(r2)
+		  			break;
+ 164:	00002406 	br	1f8 <main+0x19c>
+		  segundos = 0;
+		  segundos2 = 0;
+		  if(*BUTTON==0xf){
+			  segundos=segundos+1;
+		  }
+		  switch (segundos){ /*deco Tiempo a 7-segmentos*/
+ 168:	12801a26 	beq	r2,r10,1d4 <main+0x178>
+ 16c:	50800516 	blt	r10,r2,184 <main+0x128>
+ 170:	17c01526 	beq	r2,ra,1c8 <main+0x16c>
+ 174:	1440201e 	bne	r2,r17,1f8 <main+0x19c>
+		  			break;
+		  		  case 70000:
+		  			*SSEG0 = 0xf8;
+		  			break;
+		  		  case 80000:
+		  			*SSEG0 = 0x00;
+ 178:	d0a00417 	ldw	r2,-32752(gp)
+ 17c:	10000005 	stb	zero,0(r2)
+		  			break;
+ 180:	00001d06 	br	1f8 <main+0x19c>
+		  segundos = 0;
+		  segundos2 = 0;
+		  if(*BUTTON==0xf){
+			  segundos=segundos+1;
+		  }
+		  switch (segundos){ /*deco Tiempo a 7-segmentos*/
+ 184:	13801626 	beq	r2,r14,1e0 <main+0x184>
+ 188:	13c01b1e 	bne	r2,r15,1f8 <main+0x19c>
+		  			break;
+		  		  case 40000:
+		  			*SSEG0 = 0x99;
+		  			break;
+		  		  case 500000:
+		  			*SSEG0 = 0x92;
+ 18c:	d0a00417 	ldw	r2,-32752(gp)
+ 190:	11400005 	stb	r5,0(r2)
+		  			break;
+ 194:	00001806 	br	1f8 <main+0x19c>
+		  if(*BUTTON==0xf){
+			  segundos=segundos+1;
+		  }
+		  switch (segundos){ /*deco Tiempo a 7-segmentos*/
+		  		  case 0:
+		  			*SSEG0 = 0x40;
+ 198:	d0a00417 	ldw	r2,-32752(gp)
+ 19c:	10c00005 	stb	r3,0(r2)
+		  			break;
+ 1a0:	00001506 	br	1f8 <main+0x19c>
+		  		  case 10000:
+		  			*SSEG0 = 0xf9;
+		  			break;
+		  		  case 20000:
+		  			*SSEG0 = 0xa4;
+ 1a4:	d0a00417 	ldw	r2,-32752(gp)
+ 1a8:	12000005 	stb	r8,0(r2)
+		  			break;
+ 1ac:	00001206 	br	1f8 <main+0x19c>
+		  		  case 30000:
+		  			*SSEG0 = 0xb0;
+ 1b0:	d0a00417 	ldw	r2,-32752(gp)
+ 1b4:	11c00005 	stb	r7,0(r2)
+		  			break;
+ 1b8:	00000f06 	br	1f8 <main+0x19c>
+		  			break;
+		  		  case 500000:
+		  			*SSEG0 = 0x92;
+		  			break;
+		  		  case 60000:
+		  			*SSEG0 = 0x02;
+ 1bc:	d0a00417 	ldw	r2,-32752(gp)
+ 1c0:	13000005 	stb	r12,0(r2)
+		  			break;
+ 1c4:	00000c06 	br	1f8 <main+0x19c>
+		  		  case 70000:
+		  			*SSEG0 = 0xf8;
+ 1c8:	d0a00417 	ldw	r2,-32752(gp)
+ 1cc:	14000005 	stb	r16,0(r2)
+		  			break;
+ 1d0:	00000906 	br	1f8 <main+0x19c>
+		  		  case 80000:
+		  			*SSEG0 = 0x00;
+		  			break;
+		  		  case 90000:
+		  			*SSEG0 = 0x10;
+ 1d4:	d0a00417 	ldw	r2,-32752(gp)
+ 1d8:	13400005 	stb	r13,0(r2)
+		  			break;
+ 1dc:	00000606 	br	1f8 <main+0x19c>
+		  		  case 100000:
+		  			*SSEG0 = 0x40;
+ 1e0:	d0a00417 	ldw	r2,-32752(gp)
+ 1e4:	10c00005 	stb	r3,0(r2)
+		  			segundos = 0;
+		  			segundos2 = segundos2 + 1;
+ 1e8:	d0a00e17 	ldw	r2,-32712(gp)
+		  		  case 90000:
+		  			*SSEG0 = 0x10;
+		  			break;
+		  		  case 100000:
+		  			*SSEG0 = 0x40;
+		  			segundos = 0;
+ 1ec:	d0200f15 	stw	zero,-32708(gp)
+		  			segundos2 = segundos2 + 1;
+ 1f0:	10800044 	addi	r2,r2,1
+ 1f4:	d0a00e15 	stw	r2,-32712(gp)
+		  			break;
+		  	  }
+		  	  switch (segundos2){ /*deco Tiempo decenas a 7-segmentos*/
+ 1f8:	d0a00e17 	ldw	r2,-32712(gp)
+ 1fc:	58bfb936 	bltu	r11,r2,e4 <main+0x88>
+ 200:	100490ba 	slli	r2,r2,2
+ 204:	1505883a 	add	r2,r2,r20
+ 208:	00004506 	br	320 <main+0x2c4>
+		  			*SSEG1 = 0x40;
+		  			segundos2 = 0;
+		  			break;
+		  	  }
+	  }
+	  else if(*SWITCHES==0x5){/*Config alarma*/
+ 20c:	ac80031e 	bne	r21,r18,21c <main+0x1c0>
+		  *LEDS=0xf0;
+ 210:	057ffc04 	movi	r21,-16
+ 214:	15400005 	stb	r21,0(r2)
+ 218:	003fb206 	br	e4 <main+0x88>
+	  }
+	  else{
+	  segundos = segundos + 1;
+ 21c:	d5600f17 	ldw	r21,-32708(gp)
+ 220:	ad400044 	addi	r21,r21,1
+ 224:	d5600f15 	stw	r21,-32708(gp)
+	  *LEDS=*BUTTON;
+ 228:	d5600017 	ldw	r21,-32768(gp)
+ 22c:	ad400003 	ldbu	r21,0(r21)
+ 230:	15400005 	stb	r21,0(r2)
+	  switch (segundos){ /*deco Tiempo a 7-segmentos*/
+ 234:	d0a00f17 	ldw	r2,-32708(gp)
+ 238:	11002626 	beq	r2,r4,2d4 <main+0x278>
+ 23c:	20801016 	blt	r4,r2,280 <main+0x224>
+ 240:	05538804 	movi	r21,20000
+ 244:	15401d26 	beq	r2,r21,2bc <main+0x260>
+ 248:	a8800616 	blt	r21,r2,264 <main+0x208>
+ 24c:	10001826 	beq	r2,zero,2b0 <main+0x254>
+ 250:	0549c404 	movi	r21,10000
+ 254:	15402e1e 	bne	r2,r21,310 <main+0x2b4>
+		  case 0:
+			*SSEG0 = 0x40;
+			break;
+		  case 10000:
+			*SSEG0 = 0xf9;
+ 258:	d0a00417 	ldw	r2,-32752(gp)
+ 25c:	12400005 	stb	r9,0(r2)
+			break;
+ 260:	00002b06 	br	310 <main+0x2b4>
+		  *LEDS=0xf0;
+	  }
+	  else{
+	  segundos = segundos + 1;
+	  *LEDS=*BUTTON;
+	  switch (segundos){ /*deco Tiempo a 7-segmentos*/
+ 264:	055d4c04 	movi	r21,30000
+ 268:	15401726 	beq	r2,r21,2c8 <main+0x26c>
+ 26c:	05671014 	movui	r21,40000
+ 270:	1540271e 	bne	r2,r21,310 <main+0x2b4>
+			break;
+		  case 30000:
+			*SSEG0 = 0xb0;
+			break;
+		  case 40000:
+			*SSEG0 = 0x99;
+ 274:	d0a00417 	ldw	r2,-32752(gp)
+ 278:	11800005 	stb	r6,0(r2)
+			break;
+ 27c:	00002406 	br	310 <main+0x2b4>
+		  *LEDS=0xf0;
+	  }
+	  else{
+	  segundos = segundos + 1;
+	  *LEDS=*BUTTON;
+	  switch (segundos){ /*deco Tiempo a 7-segmentos*/
+ 280:	12801a26 	beq	r2,r10,2ec <main+0x290>
+ 284:	50800516 	blt	r10,r2,29c <main+0x240>
+ 288:	17c01526 	beq	r2,ra,2e0 <main+0x284>
+ 28c:	1440201e 	bne	r2,r17,310 <main+0x2b4>
+			break;
+		  case 70000:
+			*SSEG0 = 0xf8;
+			break;
+		  case 80000:
+			*SSEG0 = 0x00;
+ 290:	d0a00417 	ldw	r2,-32752(gp)
+ 294:	10000005 	stb	zero,0(r2)
+			break;
+ 298:	00001d06 	br	310 <main+0x2b4>
+		  *LEDS=0xf0;
+	  }
+	  else{
+	  segundos = segundos + 1;
+	  *LEDS=*BUTTON;
+	  switch (segundos){ /*deco Tiempo a 7-segmentos*/
+ 29c:	13801626 	beq	r2,r14,2f8 <main+0x29c>
+ 2a0:	13c01b1e 	bne	r2,r15,310 <main+0x2b4>
+			break;
+		  case 40000:
+			*SSEG0 = 0x99;
+			break;
+		  case 500000:
+			*SSEG0 = 0x92;
+ 2a4:	d0a00417 	ldw	r2,-32752(gp)
+ 2a8:	11400005 	stb	r5,0(r2)
+			break;
+ 2ac:	00001806 	br	310 <main+0x2b4>
+	  else{
+	  segundos = segundos + 1;
+	  *LEDS=*BUTTON;
+	  switch (segundos){ /*deco Tiempo a 7-segmentos*/
+		  case 0:
+			*SSEG0 = 0x40;
+ 2b0:	d0a00417 	ldw	r2,-32752(gp)
+ 2b4:	10c00005 	stb	r3,0(r2)
+			break;
+ 2b8:	00001506 	br	310 <main+0x2b4>
+		  case 10000:
+			*SSEG0 = 0xf9;
+			break;
+		  case 20000:
+			*SSEG0 = 0xa4;
+ 2bc:	d0a00417 	ldw	r2,-32752(gp)
+ 2c0:	12000005 	stb	r8,0(r2)
+			break;
+ 2c4:	00001206 	br	310 <main+0x2b4>
+		  case 30000:
+			*SSEG0 = 0xb0;
+ 2c8:	d0a00417 	ldw	r2,-32752(gp)
+ 2cc:	11c00005 	stb	r7,0(r2)
+			break;
+ 2d0:	00000f06 	br	310 <main+0x2b4>
+			break;
+		  case 500000:
+			*SSEG0 = 0x92;
+			break;
+		  case 60000:
+			*SSEG0 = 0x02;
+ 2d4:	d0a00417 	ldw	r2,-32752(gp)
+ 2d8:	13000005 	stb	r12,0(r2)
+			break;
+ 2dc:	00000c06 	br	310 <main+0x2b4>
+		  case 70000:
+			*SSEG0 = 0xf8;
+ 2e0:	d0a00417 	ldw	r2,-32752(gp)
+ 2e4:	14000005 	stb	r16,0(r2)
+			break;
+ 2e8:	00000906 	br	310 <main+0x2b4>
+		  case 80000:
+			*SSEG0 = 0x00;
+			break;
+		  case 90000:
+			*SSEG0 = 0x10;
+ 2ec:	d0a00417 	ldw	r2,-32752(gp)
+ 2f0:	13400005 	stb	r13,0(r2)
+			break;
+ 2f4:	00000606 	br	310 <main+0x2b4>
+		  case 100000:
+			*SSEG0 = 0x40;
+ 2f8:	d0a00417 	ldw	r2,-32752(gp)
+ 2fc:	10c00005 	stb	r3,0(r2)
+			segundos = 0;
+			segundos2 = segundos2 + 1;
+ 300:	d0a00e17 	ldw	r2,-32712(gp)
+		  case 90000:
+			*SSEG0 = 0x10;
+			break;
+		  case 100000:
+			*SSEG0 = 0x40;
+			segundos = 0;
+ 304:	d0200f15 	stw	zero,-32708(gp)
+			segundos2 = segundos2 + 1;
+ 308:	10800044 	addi	r2,r2,1
+ 30c:	d0a00e15 	stw	r2,-32712(gp)
+			break;
+	  }
+	  switch (segundos2){ /*deco Tiempo decenas a 7-segmentos*/
+ 310:	d0a00e17 	ldw	r2,-32712(gp)
+ 314:	58bf7336 	bltu	r11,r2,e4 <main+0x88>
+ 318:	100490ba 	slli	r2,r2,2
+ 31c:	14c5883a 	add	r2,r2,r19
+ 320:	15400017 	ldw	r21,0(r2)
+ 324:	d0a00317 	ldw	r2,-32756(gp)
+ 328:	a800683a 	jmp	r21
+ 32c:	00000348 	cmpgei	zero,zero,13
+ 330:	00000350 	cmplti	zero,zero,13
+ 334:	00000358 	cmpnei	zero,zero,13
+ 338:	00000360 	cmpeqi	zero,zero,13
+ 33c:	00000368 	cmpgeui	zero,zero,13
+ 340:	00000370 	cmpltui	zero,zero,13
+ 344:	00000378 	rdprs	zero,zero,13
+		  case 0:
+			*SSEG1 = 0x40;
+ 348:	10c00005 	stb	r3,0(r2)
+			break;
+ 34c:	003f6506 	br	e4 <main+0x88>
+		  case 1:
+			*SSEG1 = 0xf9;
+ 350:	12400005 	stb	r9,0(r2)
+			break;
+ 354:	003f6306 	br	e4 <main+0x88>
+		  case 2:
+			*SSEG1 = 0xa4;
+ 358:	12000005 	stb	r8,0(r2)
+			break;
+ 35c:	003f6106 	br	e4 <main+0x88>
+		  case 3:
+			*SSEG1 = 0xb0;
+ 360:	11c00005 	stb	r7,0(r2)
+			break;
+ 364:	003f5f06 	br	e4 <main+0x88>
+		  case 4:
+			*SSEG1 = 0x99;
+ 368:	11800005 	stb	r6,0(r2)
+			break;
+ 36c:	003f5d06 	br	e4 <main+0x88>
+		  case 5:
+			*SSEG1 = 0x92;
+ 370:	11400005 	stb	r5,0(r2)
+			break;
+ 374:	003f5b06 	br	e4 <main+0x88>
+		  case 6:
+			*SSEG1 = 0x40;
+ 378:	10c00005 	stb	r3,0(r2)
+			segundos2 = 0;
+ 37c:	d0200e15 	stw	zero,-32712(gp)
+			break;
+ 380:	003f5806 	br	e4 <main+0x88>
+
+00000384 <alt_load>:
+ * there is no bootloader, so this application is responsible for loading to
+ * RAM any sections that are required.
+ */  
+
+void alt_load (void)
+{
+ 384:	deffff04 	addi	sp,sp,-4
+ 388:	01000034 	movhi	r4,0
+ 38c:	01400034 	movhi	r5,0
+ 390:	dfc00015 	stw	ra,0(sp)
+ 394:	21013104 	addi	r4,r4,1220
+ 398:	29413804 	addi	r5,r5,1248
+
+static void ALT_INLINE alt_load_section (alt_u32* from, 
+                                         alt_u32* to, 
+                                         alt_u32* end)
+{
+  if (to != from)
+ 39c:	2140061e 	bne	r4,r5,3b8 <alt_load+0x34>
+ 3a0:	01000034 	movhi	r4,0
+ 3a4:	01400034 	movhi	r5,0
+ 3a8:	21000804 	addi	r4,r4,32
+ 3ac:	29400804 	addi	r5,r5,32
+ 3b0:	2140121e 	bne	r4,r5,3fc <alt_load+0x78>
+ 3b4:	00000b06 	br	3e4 <alt_load+0x60>
+ 3b8:	00c00034 	movhi	r3,0
+ 3bc:	18c13804 	addi	r3,r3,1248
+ 3c0:	1907c83a 	sub	r3,r3,r4
+ 3c4:	0005883a 	mov	r2,zero
+  {
+    while( to != end )
+ 3c8:	10fff526 	beq	r2,r3,3a0 <alt_load+0x1c>
+    {
+      *to++ = *from++;
+ 3cc:	114f883a 	add	r7,r2,r5
+ 3d0:	39c00017 	ldw	r7,0(r7)
+ 3d4:	110d883a 	add	r6,r2,r4
+ 3d8:	10800104 	addi	r2,r2,4
+ 3dc:	31c00015 	stw	r7,0(r6)
+ 3e0:	003ff906 	br	3c8 <alt_load+0x44>
+ 3e4:	01000034 	movhi	r4,0
+ 3e8:	01400034 	movhi	r5,0
+ 3ec:	21013104 	addi	r4,r4,1220
+ 3f0:	29413104 	addi	r5,r5,1220
+
+static void ALT_INLINE alt_load_section (alt_u32* from, 
+                                         alt_u32* to, 
+                                         alt_u32* end)
+{
+  if (to != from)
+ 3f4:	2140101e 	bne	r4,r5,438 <alt_load+0xb4>
+ 3f8:	00000b06 	br	428 <alt_load+0xa4>
+ 3fc:	00c00034 	movhi	r3,0
+ 400:	18c00804 	addi	r3,r3,32
+ 404:	1907c83a 	sub	r3,r3,r4
+ 408:	0005883a 	mov	r2,zero
+  {
+    while( to != end )
+ 40c:	10fff526 	beq	r2,r3,3e4 <alt_load+0x60>
+    {
+      *to++ = *from++;
+ 410:	114f883a 	add	r7,r2,r5
+ 414:	39c00017 	ldw	r7,0(r7)
+ 418:	110d883a 	add	r6,r2,r4
+ 41c:	10800104 	addi	r2,r2,4
+ 420:	31c00015 	stw	r7,0(r6)
+ 424:	003ff906 	br	40c <alt_load+0x88>
+  
+  /*
+   * Now ensure that the caches are in synch.
+   */
+  
+  alt_dcache_flush_all();
+ 428:	00004b40 	call	4b4 <alt_dcache_flush_all>
+  alt_icache_flush_all();
+}
+ 42c:	dfc00017 	ldw	ra,0(sp)
+ 430:	dec00104 	addi	sp,sp,4
+  /*
+   * Now ensure that the caches are in synch.
+   */
+  
+  alt_dcache_flush_all();
+  alt_icache_flush_all();
+ 434:	00004b81 	jmpi	4b8 <alt_icache_flush_all>
+ 438:	00c00034 	movhi	r3,0
+ 43c:	18c13104 	addi	r3,r3,1220
+ 440:	1907c83a 	sub	r3,r3,r4
+
+static void ALT_INLINE alt_load_section (alt_u32* from, 
+                                         alt_u32* to, 
+                                         alt_u32* end)
+{
+  if (to != from)
+ 444:	0005883a 	mov	r2,zero
+  {
+    while( to != end )
+ 448:	18bff726 	beq	r3,r2,428 <alt_load+0xa4>
+    {
+      *to++ = *from++;
+ 44c:	114f883a 	add	r7,r2,r5
+ 450:	39c00017 	ldw	r7,0(r7)
+ 454:	110d883a 	add	r6,r2,r4
+ 458:	10800104 	addi	r2,r2,4
+ 45c:	31c00015 	stw	r7,0(r6)
+ 460:	003ff906 	br	448 <alt_load+0xc4>
+
+00000464 <alt_main>:
+ * devices/filesystems/components in the system; and call the entry point for
+ * the users application, i.e. main().
+ */
+
+void alt_main (void)
+{
+ 464:	deffff04 	addi	sp,sp,-4
+#endif
+
+  /* ALT LOG - please see HAL/sys/alt_log_printf.h for details */
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Entering alt_main, calling alt_irq_init.\r\n");
+  /* Initialize the interrupt controller. */
+  alt_irq_init (NULL);
+ 468:	0009883a 	mov	r4,zero
+ * devices/filesystems/components in the system; and call the entry point for
+ * the users application, i.e. main().
+ */
+
+void alt_main (void)
+{
+ 46c:	dfc00015 	stw	ra,0(sp)
+#endif
+
+  /* ALT LOG - please see HAL/sys/alt_log_printf.h for details */
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Entering alt_main, calling alt_irq_init.\r\n");
+  /* Initialize the interrupt controller. */
+  alt_irq_init (NULL);
+ 470:	00004900 	call	490 <alt_irq_init>
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Done OS Init, calling alt_sem_create.\r\n");
+  ALT_SEM_CREATE (&alt_fd_list_lock, 1);
+
+  /* Initialize the device drivers/software components. */
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Calling alt_sys_init.\r\n");
+  alt_sys_init();
+ 474:	00004b00 	call	4b0 <alt_sys_init>
+   */
+
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Calling main.\r\n");
+
+#ifdef ALT_NO_EXIT
+  main (alt_argc, alt_argv, alt_envp);
+ 478:	d1a01017 	ldw	r6,-32704(gp)
+ 47c:	d1601117 	ldw	r5,-32700(gp)
+ 480:	d1201217 	ldw	r4,-32696(gp)
+  close(STDOUT_FILENO);
+  exit (result);
+#endif
+
+  ALT_LOG_PRINT_BOOT("[alt_main.c] After main - we should not be here?.\r\n");
+}
+ 484:	dfc00017 	ldw	ra,0(sp)
+ 488:	dec00104 	addi	sp,sp,4
+   */
+
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Calling main.\r\n");
+
+#ifdef ALT_NO_EXIT
+  main (alt_argc, alt_argv, alt_envp);
+ 48c:	000005c1 	jmpi	5c <main>
+
+00000490 <alt_irq_init>:
+ * The "base" parameter is ignored and only
+ * present for backwards-compatibility.
+ */
+
+void alt_irq_init ( const void* base )
+{
+ 490:	deffff04 	addi	sp,sp,-4
+ 494:	dfc00015 	stw	ra,0(sp)
+    ALTERA_NIOS2_GEN2_IRQ_INIT ( CPU, cpu);
+ 498:	00004bc0 	call	4bc <altera_nios2_gen2_irq_init>
+ * alt_irq_cpu_enable_interrupts() enables the CPU to start taking interrupts.
+ */
+static ALT_INLINE void ALT_ALWAYS_INLINE 
+       alt_irq_cpu_enable_interrupts (void)
+{
+    NIOS2_WRITE_STATUS(NIOS2_STATUS_PIE_MSK
+ 49c:	00800044 	movi	r2,1
+ 4a0:	1001703a 	wrctl	status,r2
+    alt_irq_cpu_enable_interrupts();
+}
+ 4a4:	dfc00017 	ldw	ra,0(sp)
+ 4a8:	dec00104 	addi	sp,sp,4
+ 4ac:	f800283a 	ret
+
+000004b0 <alt_sys_init>:
+ * Initialize the non-interrupt controller devices.
+ * Called after alt_irq_init().
+ */
+
+void alt_sys_init( void )
+{
+ 4b0:	f800283a 	ret
+
+000004b4 <alt_dcache_flush_all>:
+/*
+ * alt_dcache_flush_all() is called to flush the entire data cache.
+ */
+
+void alt_dcache_flush_all (void)
+{
+ 4b4:	f800283a 	ret
+
+000004b8 <alt_icache_flush_all>:
+/*
+ * alt_icache_flush_all() is called to flush the entire instruction cache.
+ */
+
+void alt_icache_flush_all (void)
+{
+ 4b8:	f800283a 	ret
+
+000004bc <altera_nios2_gen2_irq_init>:
+ * To initialize the internal interrupt controller, just clear the IENABLE
+ * register so that all possible IRQs are disabled.
+ */
+void altera_nios2_gen2_irq_init(void) 
+{
+    NIOS2_WRITE_IENABLE(0);
+ 4bc:	000170fa 	wrctl	ienable,zero
+ 4c0:	f800283a 	ret

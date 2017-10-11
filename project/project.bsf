@@ -48,8 +48,8 @@ agreement for further details.
 	(port
 		(pt 0 392)
 		(input)
-		(text "switch_external_connection_export[1..0]" (rect 0 0 156 12)(font "Arial" (font_size 8)))
-		(text "switch_external_connection_export[1..0]" (rect 4 381 238 392)(font "Arial" (font_size 8)))
+		(text "switch_external_connection_export[2..0]" (rect 0 0 158 12)(font "Arial" (font_size 8)))
+		(text "switch_external_connection_export[2..0]" (rect 4 381 238 392)(font "Arial" (font_size 8)))
 		(line (pt 0 392)(pt 208 392)(line_width 3))
 	)
 	(port

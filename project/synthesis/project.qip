@@ -2,7 +2,7 @@ set_global_assignment -entity "project" -library "project" -name IP_TOOL_NAME "Q
 set_global_assignment -entity "project" -library "project" -name IP_TOOL_VERSION "17.0"
 set_global_assignment -entity "project" -library "project" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "project" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../project.sopcinfo"]
-set_global_assignment -entity "project" -library "project" -name SLD_INFO "QSYS_NAME project HAS_SOPCINFO 1 GENERATION_ID 1507159548"
+set_global_assignment -entity "project" -library "project" -name SLD_INFO "QSYS_NAME project HAS_SOPCINFO 1 GENERATION_ID 1507742522"
 set_global_assignment -library "project" -name MISC_FILE [file join $::quartus(qip_path) "../project.cmp"]
 set_global_assignment -library "project" -name SLD_FILE [file join $::quartus(qip_path) "project.regmap"]
 set_global_assignment -library "project" -name SLD_FILE [file join $::quartus(qip_path) "project.debuginfo"]
@@ -16,7 +16,7 @@ set_global_assignment -entity "project" -library "project" -name IP_COMPONENT_DI
 set_global_assignment -entity "project" -library "project" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "project" -library "project" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "project" -library "project" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "project" -library "project" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTUwNzE1OTU0OA==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "project" -library "project" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTUwNzc0MjUyMg==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "project" -library "project" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "project" -library "project" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTRU1BNUYzMUM2::QXV0byBERVZJQ0U="
 set_global_assignment -entity "project" -library "project" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -660,7 +660,7 @@ set_global_assignment -entity "project_switch" -library "project" -name IP_COMPO
 set_global_assignment -entity "project_switch" -library "project" -name IP_COMPONENT_PARAMETER "ZGlyZWN0aW9u::SW5wdXQ=::RGlyZWN0aW9u"
 set_global_assignment -entity "project_switch" -library "project" -name IP_COMPONENT_PARAMETER "Z2VuZXJhdGVJUlE=::ZmFsc2U=::R2VuZXJhdGUgSVJR"
 set_global_assignment -entity "project_switch" -library "project" -name IP_COMPONENT_PARAMETER "c2ltRG9UZXN0QmVuY2hXaXJpbmc=::ZmFsc2U=::SGFyZHdpcmUgUElPIGlucHV0cyBpbiB0ZXN0IGJlbmNo"
-set_global_assignment -entity "project_switch" -library "project" -name IP_COMPONENT_PARAMETER "d2lkdGg=::Mg==::V2lkdGggKDEtMzIgYml0cyk="
+set_global_assignment -entity "project_switch" -library "project" -name IP_COMPONENT_PARAMETER "d2lkdGg=::Mw==::V2lkdGggKDEtMzIgYml0cyk="
 set_global_assignment -entity "project_switch" -library "project" -name IP_COMPONENT_PARAMETER "Y2xvY2tSYXRl::NTAwMDAwMDA=::Y2xvY2tSYXRl"
 set_global_assignment -entity "project_switch" -library "project" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9oYXNfdHJp::ZmFsc2U=::ZGVyaXZlZF9oYXNfdHJp"
 set_global_assignment -entity "project_switch" -library "project" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9oYXNfb3V0::ZmFsc2U=::ZGVyaXZlZF9oYXNfb3V0"
@@ -1098,15 +1098,15 @@ set_global_assignment -library "project" -name SOURCE_FILE [file join $::quartus
 set_global_assignment -library "project" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/project_ram.v"]
 set_global_assignment -library "project" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/project_led.v"]
 set_global_assignment -library "project" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/project_cpu.v"]
-set_global_assignment -library "project" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/project_cpu_cpu_debug_slave_wrapper.v"]
 set_global_assignment -library "project" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/project_cpu_cpu_rf_ram_a.mif"]
-set_global_assignment -library "project" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/project_cpu_cpu_test_bench.v"]
-set_global_assignment -library "project" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/project_cpu_cpu_ociram_default_contents.mif"]
-set_global_assignment -library "project" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/project_cpu_cpu_debug_slave_sysclk.v"]
-set_global_assignment -library "project" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/project_cpu_cpu_rf_ram_b.mif"]
-set_global_assignment -library "project" -name SDC_FILE [file join $::quartus(qip_path) "submodules/project_cpu_cpu.sdc"]
 set_global_assignment -library "project" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/project_cpu_cpu.v"]
 set_global_assignment -library "project" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/project_cpu_cpu_debug_slave_tck.v"]
+set_global_assignment -library "project" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/project_cpu_cpu_debug_slave_sysclk.v"]
+set_global_assignment -library "project" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/project_cpu_cpu_test_bench.v"]
+set_global_assignment -library "project" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/project_cpu_cpu_ociram_default_contents.mif"]
+set_global_assignment -library "project" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/project_cpu_cpu_rf_ram_b.mif"]
+set_global_assignment -library "project" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/project_cpu_cpu_debug_slave_wrapper.v"]
+set_global_assignment -library "project" -name SDC_FILE [file join $::quartus(qip_path) "submodules/project_cpu_cpu.sdc"]
 set_global_assignment -library "project" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/project_button.v"]
 
 set_global_assignment -entity "altera_reset_controller" -library "project" -name IP_TOOL_NAME "altera_reset_controller"

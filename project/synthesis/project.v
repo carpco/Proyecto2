@@ -12,7 +12,7 @@ module project (
 		output wire [7:0] sseg1_external_connection_export,  //  sseg1_external_connection.export
 		output wire [7:0] sseg2_external_connection_export,  //  sseg2_external_connection.export
 		output wire [7:0] sseg3_external_connection_export,  //  sseg3_external_connection.export
-		input  wire [1:0] switch_external_connection_export  // switch_external_connection.export
+		input  wire [2:0] switch_external_connection_export  // switch_external_connection.export
 	);
 
 	wire  [31:0] cpu_data_master_readdata;                             // mm_interconnect_0:cpu_data_master_readdata -> cpu:d_readdata

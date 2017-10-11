@@ -168,6 +168,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "reset_reset_n",
+					"strict" : false
+				},
+				{
 					"name" : "button_external_connection_export[0]",
 					"strict" : false
 				},
@@ -185,6 +189,10 @@
 				},
 				{
 					"name" : "button_external_connection_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "switch_external_connection_export[2]",
 					"strict" : false
 				},
 				{

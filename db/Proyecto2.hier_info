@@ -48,6 +48,7 @@ sseg3_external_connection_export[6] <= project_led:sseg3.out_port
 sseg3_external_connection_export[7] <= project_led:sseg3.out_port
 switch_external_connection_export[0] => switch_external_connection_export[0].IN1
 switch_external_connection_export[1] => switch_external_connection_export[1].IN1
+switch_external_connection_export[2] => switch_external_connection_export[2].IN1
 
 
 |project|project_button:button
@@ -7407,6 +7408,7 @@ clk => readdata[30]~reg0.CLK
 clk => readdata[31]~reg0.CLK
 in_port[0] => read_mux_out[0].IN1
 in_port[1] => read_mux_out[1].IN1
+in_port[2] => read_mux_out[2].IN1
 reset_n => readdata[0]~reg0.ACLR
 reset_n => readdata[1]~reg0.ACLR
 reset_n => readdata[2]~reg0.ACLR
