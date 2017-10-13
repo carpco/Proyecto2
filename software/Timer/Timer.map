@@ -119,7 +119,7 @@ LOAD /home/cgomez/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin
                 0x0000000000002180                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
                 0x0000000000002020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
 
-.text           0x0000000000002180      0xdf8
+.text           0x0000000000002180      0xdfc
                 [!provide]                        PROVIDE (stext, ABSOLUTE (.))
  *(.interp)
  *(.hash)
@@ -170,41 +170,41 @@ LOAD /home/cgomez/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin
                 0x00000000000021d4                SDECO
                 0x0000000000002498                ADECO
                 0x000000000000275c                DECO
- .text.startup  0x00000000000029cc      0x1b0 obj/default/hello_world_small.o
+ .text.startup  0x00000000000029cc      0x1b4 obj/default/hello_world_small.o
                 0x00000000000029cc                main
- .text          0x0000000000002b7c      0x1b4 /home/cgomez/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
-                0x0000000000002b7c                __divsi3
-                0x0000000000002c00                __modsi3
-                0x0000000000002c74                __udivsi3
-                0x0000000000002cd8                __umodsi3
- .text          0x0000000000002d30       0x94 ../Timer_bsp//libhal_bsp.a(alt_irq_register.o)
-                0x0000000000002d30                alt_irq_register
- .text          0x0000000000002dc4        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_vars.o)
- .text          0x0000000000002dc4       0xe0 ../Timer_bsp//libhal_bsp.a(alt_load.o)
-                0x0000000000002dc4                alt_load
- .text          0x0000000000002ea4       0x2c ../Timer_bsp//libhal_bsp.a(alt_main.o)
-                0x0000000000002ea4                alt_main
- .text          0x0000000000002ed0       0x24 ../Timer_bsp//libhal_bsp.a(alt_sys_init.o)
-                0x0000000000002ed0                alt_irq_init
-                0x0000000000002ef0                alt_sys_init
- .text          0x0000000000002ef4        0x4 ../Timer_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
-                0x0000000000002ef4                alt_dcache_flush_all
- .text          0x0000000000002ef8        0x4 ../Timer_bsp//libhal_bsp.a(alt_icache_flush_all.o)
-                0x0000000000002ef8                alt_icache_flush_all
- .text          0x0000000000002efc        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_entry.o)
- .text          0x0000000000002efc        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_handler.o)
- .text          0x0000000000002efc        0x8 ../Timer_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
-                0x0000000000002efc                altera_nios2_gen2_irq_init
- .text          0x0000000000002f04        0x0 ../Timer_bsp//libhal_bsp.a(alt_exception_entry.o)
- .text          0x0000000000002f04       0x74 ../Timer_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
-                0x0000000000002f04                alt_exception_cause_generated_bad_addr
+ .text          0x0000000000002b80      0x1b4 /home/cgomez/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
+                0x0000000000002b80                __divsi3
+                0x0000000000002c04                __modsi3
+                0x0000000000002c78                __udivsi3
+                0x0000000000002cdc                __umodsi3
+ .text          0x0000000000002d34       0x94 ../Timer_bsp//libhal_bsp.a(alt_irq_register.o)
+                0x0000000000002d34                alt_irq_register
+ .text          0x0000000000002dc8        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .text          0x0000000000002dc8       0xe0 ../Timer_bsp//libhal_bsp.a(alt_load.o)
+                0x0000000000002dc8                alt_load
+ .text          0x0000000000002ea8       0x2c ../Timer_bsp//libhal_bsp.a(alt_main.o)
+                0x0000000000002ea8                alt_main
+ .text          0x0000000000002ed4       0x24 ../Timer_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x0000000000002ed4                alt_irq_init
+                0x0000000000002ef4                alt_sys_init
+ .text          0x0000000000002ef8        0x4 ../Timer_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                0x0000000000002ef8                alt_dcache_flush_all
+ .text          0x0000000000002efc        0x4 ../Timer_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                0x0000000000002efc                alt_icache_flush_all
+ .text          0x0000000000002f00        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .text          0x0000000000002f00        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .text          0x0000000000002f00        0x8 ../Timer_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x0000000000002f00                altera_nios2_gen2_irq_init
+ .text          0x0000000000002f08        0x0 ../Timer_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .text          0x0000000000002f08       0x74 ../Timer_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000000002f08                alt_exception_cause_generated_bad_addr
  *(.gnu.warning.*)
  *(.fini)
                 [!provide]                        PROVIDE (__etext, ABSOLUTE (.))
                 [!provide]                        PROVIDE (_etext, ABSOLUTE (.))
                 [!provide]                        PROVIDE (etext, ABSOLUTE (.))
  *(.eh_frame_hdr)
-                0x0000000000002f78                . = ALIGN (0x4)
+                0x0000000000002f7c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__preinit_array_start, ABSOLUTE (.))
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end, ABSOLUTE (.))
@@ -226,133 +226,133 @@ LOAD /home/cgomez/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin
  *(SORT(.dtors.*))
                 [!provide]                        PROVIDE (__DTOR_END__, ABSOLUTE (.))
  *(.jcr)
-                0x0000000000002f78                . = ALIGN (0x4)
+                0x0000000000002f7c                . = ALIGN (0x4)
 
-.rodata         0x0000000000002f78        0x0
-                0x0000000000002f78                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
-                0x0000000000002f78                . = ALIGN (0x4)
+.rodata         0x0000000000002f7c        0x0
+                0x0000000000002f7c                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x0000000000002f7c                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  *(.rodata1)
-                0x0000000000002f78                . = ALIGN (0x4)
-                0x0000000000002f78                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
-                0x0000000000002f78                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+                0x0000000000002f7c                . = ALIGN (0x4)
+                0x0000000000002f7c                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x0000000000002f7c                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
 
-.rwdata         0x0000000000002f78       0x34 load address 0x0000000000002fac
-                0x0000000000002f78                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
-                0x0000000000002f78                . = ALIGN (0x4)
+.rwdata         0x0000000000002f7c       0x34 load address 0x0000000000002fb0
+                0x0000000000002f7c                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x0000000000002f7c                . = ALIGN (0x4)
  *(.got.plt)
  *(.got)
  *(.data1)
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x0000000000002f78        0x0 ../Timer_bsp//obj/HAL/src/crt0.o
- .data          0x0000000000002f78        0x0 obj/default/hello_world_small.o
- .data          0x0000000000002f78        0x0 /home/cgomez/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
- .data          0x0000000000002f78        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_register.o)
- .data          0x0000000000002f78        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_vars.o)
- .data          0x0000000000002f78        0x0 ../Timer_bsp//libhal_bsp.a(alt_load.o)
- .data          0x0000000000002f78        0x0 ../Timer_bsp//libhal_bsp.a(alt_main.o)
- .data          0x0000000000002f78        0x0 ../Timer_bsp//libhal_bsp.a(alt_sys_init.o)
- .data          0x0000000000002f78        0x0 ../Timer_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .data          0x0000000000002f78        0x0 ../Timer_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .data          0x0000000000002f78        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_entry.o)
- .data          0x0000000000002f78        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_handler.o)
- .data          0x0000000000002f78        0x0 ../Timer_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
- .data          0x0000000000002f78        0x0 ../Timer_bsp//libhal_bsp.a(alt_exception_entry.o)
- .data          0x0000000000002f78        0x0 ../Timer_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
-                0x000000000000af78                _gp = ABSOLUTE ((. + 0x8000))
+ .data          0x0000000000002f7c        0x0 ../Timer_bsp//obj/HAL/src/crt0.o
+ .data          0x0000000000002f7c        0x0 obj/default/hello_world_small.o
+ .data          0x0000000000002f7c        0x0 /home/cgomez/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .data          0x0000000000002f7c        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_register.o)
+ .data          0x0000000000002f7c        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .data          0x0000000000002f7c        0x0 ../Timer_bsp//libhal_bsp.a(alt_load.o)
+ .data          0x0000000000002f7c        0x0 ../Timer_bsp//libhal_bsp.a(alt_main.o)
+ .data          0x0000000000002f7c        0x0 ../Timer_bsp//libhal_bsp.a(alt_sys_init.o)
+ .data          0x0000000000002f7c        0x0 ../Timer_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x0000000000002f7c        0x0 ../Timer_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x0000000000002f7c        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .data          0x0000000000002f7c        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .data          0x0000000000002f7c        0x0 ../Timer_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .data          0x0000000000002f7c        0x0 ../Timer_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .data          0x0000000000002f7c        0x0 ../Timer_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x000000000000af7c                _gp = ABSOLUTE ((. + 0x8000))
                 [!provide]                        PROVIDE (gp, _gp)
  *(.rwdata .rwdata.*)
  *(.sdata .sdata.* .gnu.linkonce.s.*)
- .sdata         0x0000000000002f78       0x2c obj/default/hello_world_small.o
-                0x0000000000002f78                BUTTON
-                0x0000000000002f7c                LEDS
-                0x0000000000002f80                SWITCHES
-                0x0000000000002f84                SSEG3
-                0x0000000000002f88                SSEG2
-                0x0000000000002f8c                SSEG1
-                0x0000000000002f90                SSEG0
-                0x0000000000002f94                TC
-                0x0000000000002f98                PL
-                0x0000000000002f9c                PH
-                0x0000000000002fa0                TIMER
- .sdata         0x0000000000002fa4        0x4 ../Timer_bsp//libhal_bsp.a(alt_irq_vars.o)
-                0x0000000000002fa4                alt_priority_mask
- .sdata         0x0000000000002fa8        0x4 ../Timer_bsp//libhal_bsp.a(alt_sys_init.o)
-                0x0000000000002fa8                uart
+ .sdata         0x0000000000002f7c       0x2c obj/default/hello_world_small.o
+                0x0000000000002f7c                BUTTON
+                0x0000000000002f80                LEDS
+                0x0000000000002f84                SWITCHES
+                0x0000000000002f88                SSEG3
+                0x0000000000002f8c                SSEG2
+                0x0000000000002f90                SSEG1
+                0x0000000000002f94                SSEG0
+                0x0000000000002f98                TC
+                0x0000000000002f9c                PL
+                0x0000000000002fa0                PH
+                0x0000000000002fa4                TIMER
+ .sdata         0x0000000000002fa8        0x4 ../Timer_bsp//libhal_bsp.a(alt_irq_vars.o)
+                0x0000000000002fa8                alt_priority_mask
+ .sdata         0x0000000000002fac        0x4 ../Timer_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x0000000000002fac                uart
  *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
-                0x0000000000002fac                . = ALIGN (0x4)
-                0x0000000000002fac                _edata = ABSOLUTE (.)
+                0x0000000000002fb0                . = ALIGN (0x4)
+                0x0000000000002fb0                _edata = ABSOLUTE (.)
                 [!provide]                        PROVIDE (edata, ABSOLUTE (.))
-                0x0000000000002fac                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
-                0x0000000000002fac                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+                0x0000000000002fb0                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x0000000000002fb0                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
 
-.bss            0x0000000000002fe0      0x158
-                0x0000000000002fe0                __bss_start = ABSOLUTE (.)
+.bss            0x0000000000002fe4      0x158
+                0x0000000000002fe4                __bss_start = ABSOLUTE (.)
                 [!provide]                        PROVIDE (__sbss_start, ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_start, ABSOLUTE (.))
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0x0000000000002fe0       0x44 obj/default/hello_world_small.o
-                0x0000000000002fe0                alarma
-                0x0000000000002fe4                nahoras2
-                0x0000000000002fe8                nahoras
-                0x0000000000002fec                naminutos2
-                0x0000000000002ff0                naminutos
-                0x0000000000002ff4                ahoras2
-                0x0000000000002ff8                ahoras
-                0x0000000000002ffc                aminutos2
-                0x0000000000003000                aminutos
-                0x0000000000003004                shoras2
-                0x0000000000003008                shoras
-                0x000000000000300c                sminutos2
-                0x0000000000003010                sminutos
-                0x0000000000003014                horas2
-                0x0000000000003018                horas
-                0x000000000000301c                minutos2
-                0x0000000000003020                minutos
- .sbss          0x0000000000003024        0x4 ../Timer_bsp//libhal_bsp.a(alt_irq_vars.o)
-                0x0000000000003024                alt_irq_active
- .sbss          0x0000000000003028        0xc ../Timer_bsp//libhal_bsp.a(alt_main.o)
-                0x0000000000003028                alt_envp
-                0x000000000000302c                alt_argv
-                0x0000000000003030                alt_argc
- .sbss          0x0000000000003034        0x4 ../Timer_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
-                0x0000000000003034                alt_instruction_exception_handler
+ .sbss          0x0000000000002fe4       0x44 obj/default/hello_world_small.o
+                0x0000000000002fe4                alarma
+                0x0000000000002fe8                nahoras2
+                0x0000000000002fec                nahoras
+                0x0000000000002ff0                naminutos2
+                0x0000000000002ff4                naminutos
+                0x0000000000002ff8                ahoras2
+                0x0000000000002ffc                ahoras
+                0x0000000000003000                aminutos2
+                0x0000000000003004                aminutos
+                0x0000000000003008                shoras2
+                0x000000000000300c                shoras
+                0x0000000000003010                sminutos2
+                0x0000000000003014                sminutos
+                0x0000000000003018                horas2
+                0x000000000000301c                horas
+                0x0000000000003020                minutos2
+                0x0000000000003024                minutos
+ .sbss          0x0000000000003028        0x4 ../Timer_bsp//libhal_bsp.a(alt_irq_vars.o)
+                0x0000000000003028                alt_irq_active
+ .sbss          0x000000000000302c        0xc ../Timer_bsp//libhal_bsp.a(alt_main.o)
+                0x000000000000302c                alt_envp
+                0x0000000000003030                alt_argv
+                0x0000000000003034                alt_argc
+ .sbss          0x0000000000003038        0x4 ../Timer_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000000003038                alt_instruction_exception_handler
  *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
  *(.scommon)
                 [!provide]                        PROVIDE (__sbss_end, ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_end, ABSOLUTE (.))
  *(.dynbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x0000000000003038        0x0 ../Timer_bsp//obj/HAL/src/crt0.o
- .bss           0x0000000000003038        0x0 obj/default/hello_world_small.o
- .bss           0x0000000000003038        0x0 /home/cgomez/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
- .bss           0x0000000000003038        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_register.o)
- .bss           0x0000000000003038        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_vars.o)
- .bss           0x0000000000003038        0x0 ../Timer_bsp//libhal_bsp.a(alt_load.o)
- .bss           0x0000000000003038        0x0 ../Timer_bsp//libhal_bsp.a(alt_main.o)
- .bss           0x0000000000003038        0x0 ../Timer_bsp//libhal_bsp.a(alt_sys_init.o)
- .bss           0x0000000000003038        0x0 ../Timer_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .bss           0x0000000000003038        0x0 ../Timer_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .bss           0x0000000000003038        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_entry.o)
- .bss           0x0000000000003038        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_handler.o)
- .bss           0x0000000000003038        0x0 ../Timer_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
- .bss           0x0000000000003038        0x0 ../Timer_bsp//libhal_bsp.a(alt_exception_entry.o)
- .bss           0x0000000000003038        0x0 ../Timer_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .bss           0x000000000000303c        0x0 ../Timer_bsp//obj/HAL/src/crt0.o
+ .bss           0x000000000000303c        0x0 obj/default/hello_world_small.o
+ .bss           0x000000000000303c        0x0 /home/cgomez/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .bss           0x000000000000303c        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_register.o)
+ .bss           0x000000000000303c        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .bss           0x000000000000303c        0x0 ../Timer_bsp//libhal_bsp.a(alt_load.o)
+ .bss           0x000000000000303c        0x0 ../Timer_bsp//libhal_bsp.a(alt_main.o)
+ .bss           0x000000000000303c        0x0 ../Timer_bsp//libhal_bsp.a(alt_sys_init.o)
+ .bss           0x000000000000303c        0x0 ../Timer_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x000000000000303c        0x0 ../Timer_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x000000000000303c        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .bss           0x000000000000303c        0x0 ../Timer_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .bss           0x000000000000303c        0x0 ../Timer_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .bss           0x000000000000303c        0x0 ../Timer_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .bss           0x000000000000303c        0x0 ../Timer_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
  *(COMMON)
- COMMON         0x0000000000003038      0x100 ../Timer_bsp//libhal_bsp.a(alt_irq_handler.o)
-                0x0000000000003038                alt_irq
-                0x0000000000003138                . = ALIGN (0x4)
-                0x0000000000003138                __bss_end = ABSOLUTE (.)
+ COMMON         0x000000000000303c      0x100 ../Timer_bsp//libhal_bsp.a(alt_irq_handler.o)
+                0x000000000000303c                alt_irq
+                0x000000000000313c                . = ALIGN (0x4)
+                0x000000000000313c                __bss_end = ABSOLUTE (.)
 
-.ram            0x0000000000003138        0x0
+.ram            0x000000000000313c        0x0
                 [!provide]                        PROVIDE (_alt_partition_ram_start, ABSOLUTE (.))
  *(.ram .ram. ram.*)
-                0x0000000000003138                . = ALIGN (0x4)
+                0x000000000000313c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_alt_partition_ram_end, ABSOLUTE (.))
-                0x0000000000003138                _end = ABSOLUTE (.)
-                0x0000000000003138                end = ABSOLUTE (.)
-                0x0000000000003138                __alt_stack_base = ABSOLUTE (.)
+                0x000000000000313c                _end = ABSOLUTE (.)
+                0x000000000000313c                end = ABSOLUTE (.)
+                0x000000000000313c                __alt_stack_base = ABSOLUTE (.)
                 [!provide]                        PROVIDE (_alt_partition_ram_load_addr, LOADADDR (.ram))
 
 .stab
@@ -473,23 +473,23 @@ LOAD /home/cgomez/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin
  .debug_abbrev  0x0000000000000900       0x12 ../Timer_bsp//libhal_bsp.a(alt_exception_entry.o)
  .debug_abbrev  0x0000000000000912       0xe7 ../Timer_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
 
-.debug_line     0x0000000000000000      0xa38
+.debug_line     0x0000000000000000      0xa39
  *(.debug_line)
  .debug_line    0x0000000000000000       0x66 ../Timer_bsp//obj/HAL/src/crt0.o
- .debug_line    0x0000000000000066      0x1a7 obj/default/hello_world_small.o
- .debug_line    0x000000000000020d      0x105 /home/cgomez/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
- .debug_line    0x0000000000000312       0xed ../Timer_bsp//libhal_bsp.a(alt_irq_register.o)
- .debug_line    0x00000000000003ff       0x50 ../Timer_bsp//libhal_bsp.a(alt_irq_vars.o)
- .debug_line    0x000000000000044f       0xa4 ../Timer_bsp//libhal_bsp.a(alt_load.o)
- .debug_line    0x00000000000004f3       0xbd ../Timer_bsp//libhal_bsp.a(alt_main.o)
- .debug_line    0x00000000000005b0      0x11a ../Timer_bsp//libhal_bsp.a(alt_sys_init.o)
- .debug_line    0x00000000000006ca       0x4e ../Timer_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_line    0x0000000000000718       0x4e ../Timer_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .debug_line    0x0000000000000766       0x6b ../Timer_bsp//libhal_bsp.a(alt_irq_entry.o)
- .debug_line    0x00000000000007d1       0xa5 ../Timer_bsp//libhal_bsp.a(alt_irq_handler.o)
- .debug_line    0x0000000000000876       0x50 ../Timer_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_line    0x00000000000008c6       0xb3 ../Timer_bsp//libhal_bsp.a(alt_exception_entry.o)
- .debug_line    0x0000000000000979       0xbf ../Timer_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_line    0x0000000000000066      0x1a8 obj/default/hello_world_small.o
+ .debug_line    0x000000000000020e      0x105 /home/cgomez/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .debug_line    0x0000000000000313       0xed ../Timer_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_line    0x0000000000000400       0x50 ../Timer_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_line    0x0000000000000450       0xa4 ../Timer_bsp//libhal_bsp.a(alt_load.o)
+ .debug_line    0x00000000000004f4       0xbd ../Timer_bsp//libhal_bsp.a(alt_main.o)
+ .debug_line    0x00000000000005b1      0x11a ../Timer_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x00000000000006cb       0x4e ../Timer_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x0000000000000719       0x4e ../Timer_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x0000000000000767       0x6b ../Timer_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_line    0x00000000000007d2       0xa5 ../Timer_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_line    0x0000000000000877       0x50 ../Timer_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_line    0x00000000000008c7       0xb3 ../Timer_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_line    0x000000000000097a       0xbf ../Timer_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
 
 .debug_frame    0x0000000000000000      0x23c
  *(.debug_frame)

@@ -119,12 +119,15 @@ int nahoras2 = 0;
 
 int alarma = 0;
 
+//int segundos=0;
+
 static void irqhandler (void * context){
 minutos=minutos + 1;
+//segundos=segundos + 1;
 *TIMER=0b0;// reset request
 }
 
-void SDECO(){
+void SDECO(){ //deco de confiugracion de hora
 	  switch (sminutos){ /*deco Tiempo a 7-segmentos*/
 		  case 0:
 			*SSEG0 = 0x40;
@@ -240,7 +243,7 @@ void SDECO(){
 	  	  }
 	 }
 
-void ADECO(){
+void ADECO(){ //deco de configuracion de alarma
 	  switch (aminutos){ /*deco Tiempo a 7-segmentos*/
 		  case 0:
 			*SSEG0 = 0x40;
@@ -356,7 +359,7 @@ void ADECO(){
 	  	  }
 	 }
 
-void DECO(){
+void DECO(){ //deco de hora actual
 	  switch (minutos){ /*deco Tiempo a 7-segmentos*/
 		  case 0:
 			*SSEG0 = 0x40;
@@ -484,8 +487,9 @@ int main()
  *TC = 0x7;
  alt_irq_register(TIMER_IRQ, (void*)&context, irqhandler);
 
-  //alt_ic_isr_register(TIMER_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_IRQ,irqhandler,NULL,0x0);
+ //alt_ic_isr_register(TIMER_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_IRQ,irqhandler,NULL,0x0);
   while (1){
+	  //
 	  if(*SWITCHES==0x6){//configuracion de hora
 	 		  if(*BUTTON==0x3){//modifica la hora
 	 			  shoras=shoras+1;
@@ -500,7 +504,6 @@ int main()
 	 		  horas2=shoras2;
 	 		  minutos=sminutos/10000;
 	 		  minutos2=sminutos2;
-	 		  SDECO();
 	 		  }
 		  }
 	 	  else if(*SWITCHES==0x5){//enciende la alarma
@@ -518,9 +521,12 @@ int main()
 				  nahoras2=ahoras2;
 				  naminutos=aminutos/10000;
 				  naminutos2=aminutos2;
-				  ADECO();
 			  }
 	 	  }
+	 	  /*else if(segundos==60){
+	 		  segundos=0;
+	 		  minutos=minutos+1;
+	 	  }*/
 	 	  else{
 	 		  if(alarma==1&&horas2==nahoras2&&horas==nahoras&&minutos2==naminutos2&&minutos==naminutos){
 	 			  *LEDS=0xff;
