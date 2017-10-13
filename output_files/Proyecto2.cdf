@@ -3,10 +3,10 @@ JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
+	P ActionCode(Cfg)
+		Device PartName(5CSEMA5F31) Path("/home/jose/QuartusProjects/Proyecto2/output_files/") File("Proyecto2.sof") MfrSpec(OpMask(1));
 	P ActionCode(Ign)
 		Device PartName(5CSEMA5F31) MfrSpec(OpMask(0));
-	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("/home/cgomez/github/Proyecto2/output_files/") File("Proyecto2.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

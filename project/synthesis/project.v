@@ -18,14 +18,14 @@ module project (
 	wire  [31:0] cpu_data_master_readdata;                             // mm_interconnect_0:cpu_data_master_readdata -> cpu:d_readdata
 	wire         cpu_data_master_waitrequest;                          // mm_interconnect_0:cpu_data_master_waitrequest -> cpu:d_waitrequest
 	wire         cpu_data_master_debugaccess;                          // cpu:debug_mem_slave_debugaccess_to_roms -> mm_interconnect_0:cpu_data_master_debugaccess
-	wire  [14:0] cpu_data_master_address;                              // cpu:d_address -> mm_interconnect_0:cpu_data_master_address
+	wire  [13:0] cpu_data_master_address;                              // cpu:d_address -> mm_interconnect_0:cpu_data_master_address
 	wire   [3:0] cpu_data_master_byteenable;                           // cpu:d_byteenable -> mm_interconnect_0:cpu_data_master_byteenable
 	wire         cpu_data_master_read;                                 // cpu:d_read -> mm_interconnect_0:cpu_data_master_read
 	wire         cpu_data_master_write;                                // cpu:d_write -> mm_interconnect_0:cpu_data_master_write
 	wire  [31:0] cpu_data_master_writedata;                            // cpu:d_writedata -> mm_interconnect_0:cpu_data_master_writedata
 	wire  [31:0] cpu_instruction_master_readdata;                      // mm_interconnect_0:cpu_instruction_master_readdata -> cpu:i_readdata
 	wire         cpu_instruction_master_waitrequest;                   // mm_interconnect_0:cpu_instruction_master_waitrequest -> cpu:i_waitrequest
-	wire  [14:0] cpu_instruction_master_address;                       // cpu:i_address -> mm_interconnect_0:cpu_instruction_master_address
+	wire  [13:0] cpu_instruction_master_address;                       // cpu:i_address -> mm_interconnect_0:cpu_instruction_master_address
 	wire         cpu_instruction_master_read;                          // cpu:i_read -> mm_interconnect_0:cpu_instruction_master_read
 	wire         mm_interconnect_0_uart_avalon_jtag_slave_chipselect;  // mm_interconnect_0:uart_avalon_jtag_slave_chipselect -> uart:av_chipselect
 	wire  [31:0] mm_interconnect_0_uart_avalon_jtag_slave_readdata;    // uart:av_readdata -> mm_interconnect_0:uart_avalon_jtag_slave_readdata
