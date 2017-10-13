@@ -587,6 +587,7 @@ minutos=minutos + 1;
     21c0:	10800044 	addi	r2,r2,1
     21c4:	d0a02a15 	stw	r2,-32600(gp)
 //segundos=segundos + 1;
+//*LEDS=0xff;
 *TIMER=0b0;// reset request
     21c8:	d0a00a17 	ldw	r2,-32728(gp)
     21cc:	10000015 	stw	zero,0(r2)
@@ -614,7 +615,7 @@ void SDECO(){ //deco de confiugracion de hora
 			*SSEG0 = 0xf9;
     21fc:	00c03e44 	movi	r3,249
     2200:	00002206 	br	228c <SDECO+0xb8>
-//segundos=segundos + 1;
+//*LEDS=0xff;
 *TIMER=0b0;// reset request
 }
 
@@ -632,7 +633,7 @@ void SDECO(){ //deco de confiugracion de hora
 			*SSEG0 = 0x99;
     2214:	00c02644 	movi	r3,153
     2218:	00001c06 	br	228c <SDECO+0xb8>
-//segundos=segundos + 1;
+//*LEDS=0xff;
 *TIMER=0b0;// reset request
 }
 
@@ -655,7 +656,7 @@ void SDECO(){ //deco de confiugracion de hora
 			*SSEG0 = 0xf8;
     2240:	00c03e04 	movi	r3,248
     2244:	00001106 	br	228c <SDECO+0xb8>
-//segundos=segundos + 1;
+//*LEDS=0xff;
 *TIMER=0b0;// reset request
 }
 

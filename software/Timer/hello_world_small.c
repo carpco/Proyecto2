@@ -124,6 +124,7 @@ int alarma = 0;
 static void irqhandler (void * context){
 minutos=minutos + 1;
 //segundos=segundos + 1;
+//*LEDS=0xff;
 *TIMER=0b0;// reset request
 }
 
