@@ -1,0 +1,547 @@
+Archive member included to satisfy reference by file (symbol)
+
+../CLOCK_bsp//libhal_bsp.a(alt_irq_register.o)
+                              obj/default/hello_world_small.o (alt_irq_register)
+../CLOCK_bsp//libhal_bsp.a(alt_irq_vars.o)
+                              ../CLOCK_bsp//libhal_bsp.a(alt_irq_register.o) (alt_irq_active)
+../CLOCK_bsp//libhal_bsp.a(alt_load.o)
+                              ../CLOCK_bsp//obj/HAL/src/crt0.o (alt_load)
+../CLOCK_bsp//libhal_bsp.a(alt_main.o)
+                              ../CLOCK_bsp//obj/HAL/src/crt0.o (alt_main)
+../CLOCK_bsp//libhal_bsp.a(alt_sys_init.o)
+                              ../CLOCK_bsp//libhal_bsp.a(alt_main.o) (alt_irq_init)
+../CLOCK_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                              ../CLOCK_bsp//libhal_bsp.a(alt_load.o) (alt_dcache_flush_all)
+../CLOCK_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                              ../CLOCK_bsp//libhal_bsp.a(alt_load.o) (alt_icache_flush_all)
+../CLOCK_bsp//libhal_bsp.a(alt_irq_entry.o)
+                              ../CLOCK_bsp//libhal_bsp.a(alt_irq_register.o) (alt_irq_entry)
+../CLOCK_bsp//libhal_bsp.a(alt_irq_handler.o)
+                              ../CLOCK_bsp//libhal_bsp.a(alt_irq_register.o) (alt_irq_handler)
+../CLOCK_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                              ../CLOCK_bsp//libhal_bsp.a(alt_sys_init.o) (altera_nios2_gen2_irq_init)
+../CLOCK_bsp//libhal_bsp.a(alt_exception_entry.o)
+                              ../CLOCK_bsp//libhal_bsp.a(alt_irq_entry.o) (alt_exception)
+../CLOCK_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                              ../CLOCK_bsp//libhal_bsp.a(alt_exception_entry.o) (alt_instruction_exception_entry)
+
+Allocating common symbols
+Common symbol       size              file
+
+alt_irq             0x100             ../CLOCK_bsp//libhal_bsp.a(alt_irq_handler.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+reset            0x0000000000000000 0x0000000000000020
+ram              0x0000000000000020 0x0000000000000fe0
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD ../CLOCK_bsp//obj/HAL/src/crt0.o
+LOAD obj/default/hello_world_small.o
+LOAD /home/cgomez/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libstdc++.a
+LOAD /home/cgomez/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libm.a
+LOAD /home/cgomez/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a
+START GROUP
+LOAD /home/cgomez/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a
+LOAD /home/cgomez/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a
+LOAD ../CLOCK_bsp//libhal_bsp.a
+LOAD /home/cgomez/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libm.a
+END GROUP
+LOAD /home/cgomez/intelFPGA_lite/17.0/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a
+                0x0000000000000000                __alt_mem_ram = 0x0
+
+.entry          0x0000000000000000       0x20
+ *(.entry)
+ .entry         0x0000000000000000       0x20 ../CLOCK_bsp//obj/HAL/src/crt0.o
+                0x0000000000000000                __reset
+                0x000000000000000c                _exit
+
+.exceptions     0x0000000000000020      0x160
+                0x0000000000000020                PROVIDE (__ram_exceptions_start, ABSOLUTE (.))
+                0x0000000000000020                . = ALIGN (0x20)
+ *(.irq)
+ *(.exceptions.entry.label)
+ .exceptions.entry.label
+                0x0000000000000020        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_irq_entry.o)
+                0x0000000000000020                alt_irq_entry
+ .exceptions.entry.label
+                0x0000000000000020        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_exception_entry.o)
+                0x0000000000000020                alt_exception
+ *(.exceptions.entry.user)
+ *(.exceptions.entry.ecc_fatal)
+ *(.exceptions.entry)
+ .exceptions.entry
+                0x0000000000000020       0x54 ../CLOCK_bsp//libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.irqtest.user)
+ *(.exceptions.irqtest)
+ .exceptions.irqtest
+                0x0000000000000074       0x10 ../CLOCK_bsp//libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqhandler.user)
+ *(.exceptions.irqhandler)
+ .exceptions.irqhandler
+                0x0000000000000084        0x4 ../CLOCK_bsp//libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.irqreturn.user)
+ *(.exceptions.irqreturn)
+ .exceptions.irqreturn
+                0x0000000000000088        0x4 ../CLOCK_bsp//libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.label)
+ .exceptions.notirq.label
+                0x000000000000008c        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_irq_entry.o)
+ *(.exceptions.notirq.user)
+ *(.exceptions.notirq)
+ .exceptions.notirq
+                0x000000000000008c        0x8 ../CLOCK_bsp//libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.soft.user)
+ *(.exceptions.soft)
+ *(.exceptions.unknown.user)
+ *(.exceptions.unknown)
+ .exceptions.unknown
+                0x0000000000000094       0x14 ../CLOCK_bsp//libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.label)
+ .exceptions.exit.label
+                0x00000000000000a8        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .exceptions.exit.label
+                0x00000000000000a8        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions.exit.user)
+ *(.exceptions.exit)
+ .exceptions.exit
+                0x00000000000000a8       0x54 ../CLOCK_bsp//libhal_bsp.a(alt_exception_entry.o)
+ *(.exceptions)
+ .exceptions    0x00000000000000fc       0x60 ../CLOCK_bsp//libhal_bsp.a(alt_irq_handler.o)
+                0x00000000000000fc                alt_irq_handler
+ .exceptions    0x000000000000015c       0x24 ../CLOCK_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x000000000000015c                alt_instruction_exception_entry
+                0x0000000000000180                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
+                0x0000000000000020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
+
+.text           0x0000000000000180      0xb24
+                [!provide]                        PROVIDE (stext, ABSOLUTE (.))
+ *(.interp)
+ *(.hash)
+ *(.dynsym)
+ *(.dynstr)
+ *(.gnu.version)
+ *(.gnu.version_d)
+ *(.gnu.version_r)
+ *(.rel.init)
+ *(.rela.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rela.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rela.ctors)
+ *(.rel.dtors)
+ *(.rela.dtors)
+ *(.rel.got)
+ *(.rela.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rel.plt)
+ *(.rela.plt)
+ *(.rel.dyn)
+ *(.init)
+ *(.plt)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000000000180       0x3c ../CLOCK_bsp//obj/HAL/src/crt0.o
+                0x0000000000000180                _start
+ .text          0x00000000000001bc      0x75c obj/default/hello_world_small.o
+                0x00000000000001e0                SDECO
+                0x0000000000000444                ADECO
+                0x00000000000006a8                DECO
+ .text.startup  0x0000000000000918      0x144 obj/default/hello_world_small.o
+                0x0000000000000918                main
+ .text          0x0000000000000a5c       0x94 ../CLOCK_bsp//libhal_bsp.a(alt_irq_register.o)
+                0x0000000000000a5c                alt_irq_register
+ .text          0x0000000000000af0        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .text          0x0000000000000af0       0xe0 ../CLOCK_bsp//libhal_bsp.a(alt_load.o)
+                0x0000000000000af0                alt_load
+ .text          0x0000000000000bd0       0x2c ../CLOCK_bsp//libhal_bsp.a(alt_main.o)
+                0x0000000000000bd0                alt_main
+ .text          0x0000000000000bfc       0x24 ../CLOCK_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x0000000000000bfc                alt_irq_init
+                0x0000000000000c1c                alt_sys_init
+ .text          0x0000000000000c20        0x4 ../CLOCK_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                0x0000000000000c20                alt_dcache_flush_all
+ .text          0x0000000000000c24        0x4 ../CLOCK_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                0x0000000000000c24                alt_icache_flush_all
+ .text          0x0000000000000c28        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .text          0x0000000000000c28        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .text          0x0000000000000c28        0x8 ../CLOCK_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x0000000000000c28                altera_nios2_gen2_irq_init
+ .text          0x0000000000000c30        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .text          0x0000000000000c30       0x74 ../CLOCK_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000000000c30                alt_exception_cause_generated_bad_addr
+ *(.gnu.warning.*)
+ *(.fini)
+                [!provide]                        PROVIDE (__etext, ABSOLUTE (.))
+                [!provide]                        PROVIDE (_etext, ABSOLUTE (.))
+                [!provide]                        PROVIDE (etext, ABSOLUTE (.))
+ *(.eh_frame_hdr)
+                0x0000000000000ca4                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__preinit_array_start, ABSOLUTE (.))
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end, ABSOLUTE (.))
+                [!provide]                        PROVIDE (__init_array_start, ABSOLUTE (.))
+ *(.init_array)
+                [!provide]                        PROVIDE (__init_array_end, ABSOLUTE (.))
+                [!provide]                        PROVIDE (__fini_array_start, ABSOLUTE (.))
+ *(.fini_array)
+                [!provide]                        PROVIDE (__fini_array_end, ABSOLUTE (.))
+ *(.eh_frame)
+ *(.gcc_except_table .gcc_except_table.*)
+ *(.dynamic)
+                [!provide]                        PROVIDE (__CTOR_LIST__, ABSOLUTE (.))
+ *(.ctors)
+ *(SORT(.ctors.*))
+                [!provide]                        PROVIDE (__CTOR_END__, ABSOLUTE (.))
+                [!provide]                        PROVIDE (__DTOR_LIST__, ABSOLUTE (.))
+ *(.dtors)
+ *(SORT(.dtors.*))
+                [!provide]                        PROVIDE (__DTOR_END__, ABSOLUTE (.))
+ *(.jcr)
+                0x0000000000000ca4                . = ALIGN (0x4)
+
+.rodata         0x0000000000000ca4        0x0
+                0x0000000000000ca4                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x0000000000000ca4                . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ *(.rodata1)
+                0x0000000000000ca4                . = ALIGN (0x4)
+                0x0000000000000ca4                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x0000000000000ca4                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+
+.rwdata         0x0000000000000ca4       0x28 load address 0x0000000000000ccc
+                0x0000000000000ca4                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x0000000000000ca4                . = ALIGN (0x4)
+ *(.got.plt)
+ *(.got)
+ *(.data1)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x0000000000000ca4        0x0 ../CLOCK_bsp//obj/HAL/src/crt0.o
+ .data          0x0000000000000ca4        0x0 obj/default/hello_world_small.o
+ .data          0x0000000000000ca4        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_irq_register.o)
+ .data          0x0000000000000ca4        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .data          0x0000000000000ca4        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_load.o)
+ .data          0x0000000000000ca4        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_main.o)
+ .data          0x0000000000000ca4        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_sys_init.o)
+ .data          0x0000000000000ca4        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x0000000000000ca4        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x0000000000000ca4        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .data          0x0000000000000ca4        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .data          0x0000000000000ca4        0x0 ../CLOCK_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .data          0x0000000000000ca4        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .data          0x0000000000000ca4        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000000008ca4                _gp = ABSOLUTE ((. + 0x8000))
+                [!provide]                        PROVIDE (gp, _gp)
+ *(.rwdata .rwdata.*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x0000000000000ca4       0x20 obj/default/hello_world_small.o
+                0x0000000000000ca4                BUTTON
+                0x0000000000000ca8                LEDS
+                0x0000000000000cac                SWITCHES
+                0x0000000000000cb0                SSEG3
+                0x0000000000000cb4                SSEG2
+                0x0000000000000cb8                SSEG1
+                0x0000000000000cbc                SSEG0
+                0x0000000000000cc0                TIMER
+ .sdata         0x0000000000000cc4        0x4 ../CLOCK_bsp//libhal_bsp.a(alt_irq_vars.o)
+                0x0000000000000cc4                alt_priority_mask
+ .sdata         0x0000000000000cc8        0x4 ../CLOCK_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x0000000000000cc8                uart
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x0000000000000ccc                . = ALIGN (0x4)
+                0x0000000000000ccc                _edata = ABSOLUTE (.)
+                [!provide]                        PROVIDE (edata, ABSOLUTE (.))
+                0x0000000000000ccc                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x0000000000000ccc                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+
+.bss            0x0000000000000cf4      0x138
+                0x0000000000000cf4                __bss_start = ABSOLUTE (.)
+                [!provide]                        PROVIDE (__sbss_start, ABSOLUTE (.))
+                [!provide]                        PROVIDE (___sbss_start, ABSOLUTE (.))
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x0000000000000cf4       0x24 obj/default/hello_world_small.o
+                0x0000000000000cf4                ahoras2
+                0x0000000000000cf8                ahoras
+                0x0000000000000cfc                aminutos2
+                0x0000000000000d00                aminutos
+                0x0000000000000d04                alarma
+                0x0000000000000d08                horas2
+                0x0000000000000d0c                horas
+                0x0000000000000d10                minutos2
+                0x0000000000000d14                minutos
+ .sbss          0x0000000000000d18        0x4 ../CLOCK_bsp//libhal_bsp.a(alt_irq_vars.o)
+                0x0000000000000d18                alt_irq_active
+ .sbss          0x0000000000000d1c        0xc ../CLOCK_bsp//libhal_bsp.a(alt_main.o)
+                0x0000000000000d1c                alt_envp
+                0x0000000000000d20                alt_argv
+                0x0000000000000d24                alt_argc
+ .sbss          0x0000000000000d28        0x4 ../CLOCK_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000000000d28                alt_instruction_exception_handler
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.scommon)
+                [!provide]                        PROVIDE (__sbss_end, ABSOLUTE (.))
+                [!provide]                        PROVIDE (___sbss_end, ABSOLUTE (.))
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x0000000000000d2c        0x0 ../CLOCK_bsp//obj/HAL/src/crt0.o
+ .bss           0x0000000000000d2c        0x0 obj/default/hello_world_small.o
+ .bss           0x0000000000000d2c        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_irq_register.o)
+ .bss           0x0000000000000d2c        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .bss           0x0000000000000d2c        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_load.o)
+ .bss           0x0000000000000d2c        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_main.o)
+ .bss           0x0000000000000d2c        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_sys_init.o)
+ .bss           0x0000000000000d2c        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x0000000000000d2c        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x0000000000000d2c        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .bss           0x0000000000000d2c        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .bss           0x0000000000000d2c        0x0 ../CLOCK_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .bss           0x0000000000000d2c        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .bss           0x0000000000000d2c        0x0 ../CLOCK_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+ *(COMMON)
+ COMMON         0x0000000000000d2c      0x100 ../CLOCK_bsp//libhal_bsp.a(alt_irq_handler.o)
+                0x0000000000000d2c                alt_irq
+                0x0000000000000e2c                . = ALIGN (0x4)
+                0x0000000000000e2c                __bss_end = ABSOLUTE (.)
+
+.ram            0x0000000000000e2c        0x0
+                [!provide]                        PROVIDE (_alt_partition_ram_start, ABSOLUTE (.))
+ *(.ram .ram. ram.*)
+                0x0000000000000e2c                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_alt_partition_ram_end, ABSOLUTE (.))
+                0x0000000000000e2c                _end = ABSOLUTE (.)
+                0x0000000000000e2c                end = ABSOLUTE (.)
+                0x0000000000000e2c                __alt_stack_base = ABSOLUTE (.)
+                [!provide]                        PROVIDE (_alt_partition_ram_load_addr, LOADADDR (.ram))
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x23
+ *(.comment)
+ .comment       0x0000000000000000       0x23 obj/default/hello_world_small.o
+                                         0x24 (size before relaxing)
+ .comment       0x0000000000000023       0x24 ../CLOCK_bsp//libhal_bsp.a(alt_irq_register.o)
+ .comment       0x0000000000000023       0x24 ../CLOCK_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .comment       0x0000000000000023       0x24 ../CLOCK_bsp//libhal_bsp.a(alt_load.o)
+ .comment       0x0000000000000023       0x24 ../CLOCK_bsp//libhal_bsp.a(alt_main.o)
+ .comment       0x0000000000000023       0x24 ../CLOCK_bsp//libhal_bsp.a(alt_sys_init.o)
+ .comment       0x0000000000000023       0x24 ../CLOCK_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .comment       0x0000000000000023       0x24 ../CLOCK_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .comment       0x0000000000000023       0x24 ../CLOCK_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .comment       0x0000000000000023       0x24 ../CLOCK_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .comment       0x0000000000000023       0x24 ../CLOCK_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x1f8
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x28 ../CLOCK_bsp//obj/HAL/src/crt0.o
+ .debug_aranges
+                0x0000000000000028       0x28 obj/default/hello_world_small.o
+ .debug_aranges
+                0x0000000000000050       0x20 ../CLOCK_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_aranges
+                0x0000000000000070       0x18 ../CLOCK_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_aranges
+                0x0000000000000088       0x20 ../CLOCK_bsp//libhal_bsp.a(alt_load.o)
+ .debug_aranges
+                0x00000000000000a8       0x20 ../CLOCK_bsp//libhal_bsp.a(alt_main.o)
+ .debug_aranges
+                0x00000000000000c8       0x20 ../CLOCK_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_aranges
+                0x00000000000000e8       0x20 ../CLOCK_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_aranges
+                0x0000000000000108       0x20 ../CLOCK_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_aranges
+                0x0000000000000128       0x30 ../CLOCK_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_aranges
+                0x0000000000000158       0x20 ../CLOCK_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_aranges
+                0x0000000000000178       0x20 ../CLOCK_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_aranges
+                0x0000000000000198       0x38 ../CLOCK_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_aranges
+                0x00000000000001d0       0x28 ../CLOCK_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0x1190
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000       0x65 ../CLOCK_bsp//obj/HAL/src/crt0.o
+ .debug_info    0x0000000000000065      0x2b3 obj/default/hello_world_small.o
+ .debug_info    0x0000000000000318      0x308 ../CLOCK_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_info    0x0000000000000620       0x88 ../CLOCK_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_info    0x00000000000006a8      0x1c9 ../CLOCK_bsp//libhal_bsp.a(alt_load.o)
+ .debug_info    0x0000000000000871      0x169 ../CLOCK_bsp//libhal_bsp.a(alt_main.o)
+ .debug_info    0x00000000000009da      0x19d ../CLOCK_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x0000000000000b77       0x92 ../CLOCK_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x0000000000000c09       0x92 ../CLOCK_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x0000000000000c9b       0x6e ../CLOCK_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_info    0x0000000000000d09      0x184 ../CLOCK_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_info    0x0000000000000e8d       0x92 ../CLOCK_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_info    0x0000000000000f1f       0x74 ../CLOCK_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_info    0x0000000000000f93      0x1fd ../CLOCK_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+
+.debug_abbrev   0x0000000000000000      0x8e0
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x12 ../CLOCK_bsp//obj/HAL/src/crt0.o
+ .debug_abbrev  0x0000000000000012      0x124 obj/default/hello_world_small.o
+ .debug_abbrev  0x0000000000000136      0x1a5 ../CLOCK_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_abbrev  0x00000000000002db       0x40 ../CLOCK_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_abbrev  0x000000000000031b       0xd8 ../CLOCK_bsp//libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x00000000000003f3       0xee ../CLOCK_bsp//libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x00000000000004e1      0x10e ../CLOCK_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x00000000000005ef       0x42 ../CLOCK_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x0000000000000631       0x42 ../CLOCK_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x0000000000000673       0x12 ../CLOCK_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_abbrev  0x0000000000000685      0x120 ../CLOCK_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_abbrev  0x00000000000007a5       0x42 ../CLOCK_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_abbrev  0x00000000000007e7       0x12 ../CLOCK_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_abbrev  0x00000000000007f9       0xe7 ../CLOCK_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+
+.debug_line     0x0000000000000000      0x8fb
+ *(.debug_line)
+ .debug_line    0x0000000000000000       0x66 ../CLOCK_bsp//obj/HAL/src/crt0.o
+ .debug_line    0x0000000000000066      0x16f obj/default/hello_world_small.o
+ .debug_line    0x00000000000001d5       0xed ../CLOCK_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_line    0x00000000000002c2       0x50 ../CLOCK_bsp//libhal_bsp.a(alt_irq_vars.o)
+ .debug_line    0x0000000000000312       0xa4 ../CLOCK_bsp//libhal_bsp.a(alt_load.o)
+ .debug_line    0x00000000000003b6       0xbd ../CLOCK_bsp//libhal_bsp.a(alt_main.o)
+ .debug_line    0x0000000000000473      0x11a ../CLOCK_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x000000000000058d       0x4e ../CLOCK_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x00000000000005db       0x4e ../CLOCK_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x0000000000000629       0x6b ../CLOCK_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_line    0x0000000000000694       0xa5 ../CLOCK_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_line    0x0000000000000739       0x50 ../CLOCK_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_line    0x0000000000000789       0xb3 ../CLOCK_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_line    0x000000000000083c       0xbf ../CLOCK_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+
+.debug_frame    0x0000000000000000      0x1ec
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0x70 obj/default/hello_world_small.o
+ .debug_frame   0x0000000000000070       0x20 ../CLOCK_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_frame   0x0000000000000090       0x30 ../CLOCK_bsp//libhal_bsp.a(alt_load.o)
+ .debug_frame   0x00000000000000c0       0x2c ../CLOCK_bsp//libhal_bsp.a(alt_main.o)
+ .debug_frame   0x00000000000000ec       0x3c ../CLOCK_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x0000000000000128       0x20 ../CLOCK_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x0000000000000148       0x20 ../CLOCK_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x0000000000000168       0x34 ../CLOCK_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_frame   0x000000000000019c       0x20 ../CLOCK_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_frame   0x00000000000001bc       0x30 ../CLOCK_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+
+.debug_str      0x0000000000000000      0xa2b
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x182 obj/default/hello_world_small.o
+                                        0x1eb (size before relaxing)
+ .debug_str     0x0000000000000182       0xef ../CLOCK_bsp//libhal_bsp.a(alt_irq_register.o)
+                                        0x1ff (size before relaxing)
+ .debug_str     0x0000000000000271       0x17 ../CLOCK_bsp//libhal_bsp.a(alt_irq_vars.o)
+                                        0x131 (size before relaxing)
+ .debug_str     0x0000000000000288      0x113 ../CLOCK_bsp//libhal_bsp.a(alt_load.o)
+                                        0x233 (size before relaxing)
+ .debug_str     0x000000000000039b       0x8f ../CLOCK_bsp//libhal_bsp.a(alt_main.o)
+                                        0x1ac (size before relaxing)
+ .debug_str     0x000000000000042a       0xde ../CLOCK_bsp//libhal_bsp.a(alt_sys_init.o)
+                                        0x24e (size before relaxing)
+ .debug_str     0x0000000000000508       0x1f ../CLOCK_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                                        0x14c (size before relaxing)
+ .debug_str     0x0000000000000527       0x1f ../CLOCK_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                                        0x14c (size before relaxing)
+ .debug_str     0x0000000000000546       0x3a ../CLOCK_bsp//libhal_bsp.a(alt_irq_handler.o)
+                                        0x18e (size before relaxing)
+ .debug_str     0x0000000000000580       0x20 ../CLOCK_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                                        0x153 (size before relaxing)
+ .debug_str     0x00000000000005a0      0x48b ../CLOCK_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+                                        0x597 (size before relaxing)
+
+.debug_loc      0x0000000000000000      0x1f2
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000       0xfa ../CLOCK_bsp//libhal_bsp.a(alt_irq_register.o)
+ .debug_loc     0x00000000000000fa       0x21 ../CLOCK_bsp//libhal_bsp.a(alt_sys_init.o)
+ .debug_loc     0x000000000000011b       0x72 ../CLOCK_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_loc     0x000000000000018d       0x65 ../CLOCK_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_alt_sim_info
+                0x0000000000000000       0x10
+ *(.debug_alt_sim_info)
+ .debug_alt_sim_info
+                0x0000000000000000       0x10 ../CLOCK_bsp//obj/HAL/src/crt0.o
+                0x0000000000001000                __alt_data_end = 0x1000
+                0x0000000000001000                PROVIDE (__alt_stack_pointer, __alt_data_end)
+                [!provide]                        PROVIDE (__alt_stack_limit, __alt_stack_base)
+                [!provide]                        PROVIDE (__alt_heap_start, end)
+                [!provide]                        PROVIDE (__alt_heap_limit, 0x1000)
+OUTPUT(CLOCK.elf elf32-littlenios2)
+
+.debug_ranges   0x0000000000000000      0x100
+ .debug_ranges  0x0000000000000000       0x20 ../CLOCK_bsp//obj/HAL/src/crt0.o
+ .debug_ranges  0x0000000000000020       0x18 obj/default/hello_world_small.o
+ .debug_ranges  0x0000000000000038       0x48 ../CLOCK_bsp//libhal_bsp.a(alt_load.o)
+ .debug_ranges  0x0000000000000080       0x28 ../CLOCK_bsp//libhal_bsp.a(alt_irq_entry.o)
+ .debug_ranges  0x00000000000000a8       0x10 ../CLOCK_bsp//libhal_bsp.a(alt_irq_handler.o)
+ .debug_ranges  0x00000000000000b8       0x30 ../CLOCK_bsp//libhal_bsp.a(alt_exception_entry.o)
+ .debug_ranges  0x00000000000000e8       0x18 ../CLOCK_bsp//libhal_bsp.a(alt_instruction_exception_entry.o)
