@@ -4,7 +4,7 @@
 
 `timescale 1 ps / 1 ps
 module project (
-		input  wire [3:0] button_external_connection_export, // button_external_connection.export
+		input  wire [2:0] button_external_connection_export, // button_external_connection.export
 		input  wire       clk_clk,                           //                        clk.clk
 		output wire [7:0] led_external_connection_export,    //    led_external_connection.export
 		input  wire       reset_reset_n,                     //                      reset.reset_n
@@ -18,14 +18,14 @@ module project (
 	wire  [31:0] cpu_data_master_readdata;                             // mm_interconnect_0:cpu_data_master_readdata -> cpu:d_readdata
 	wire         cpu_data_master_waitrequest;                          // mm_interconnect_0:cpu_data_master_waitrequest -> cpu:d_waitrequest
 	wire         cpu_data_master_debugaccess;                          // cpu:debug_mem_slave_debugaccess_to_roms -> mm_interconnect_0:cpu_data_master_debugaccess
-	wire  [12:0] cpu_data_master_address;                              // cpu:d_address -> mm_interconnect_0:cpu_data_master_address
+	wire  [14:0] cpu_data_master_address;                              // cpu:d_address -> mm_interconnect_0:cpu_data_master_address
 	wire   [3:0] cpu_data_master_byteenable;                           // cpu:d_byteenable -> mm_interconnect_0:cpu_data_master_byteenable
 	wire         cpu_data_master_read;                                 // cpu:d_read -> mm_interconnect_0:cpu_data_master_read
 	wire         cpu_data_master_write;                                // cpu:d_write -> mm_interconnect_0:cpu_data_master_write
 	wire  [31:0] cpu_data_master_writedata;                            // cpu:d_writedata -> mm_interconnect_0:cpu_data_master_writedata
 	wire  [31:0] cpu_instruction_master_readdata;                      // mm_interconnect_0:cpu_instruction_master_readdata -> cpu:i_readdata
 	wire         cpu_instruction_master_waitrequest;                   // mm_interconnect_0:cpu_instruction_master_waitrequest -> cpu:i_waitrequest
-	wire  [12:0] cpu_instruction_master_address;                       // cpu:i_address -> mm_interconnect_0:cpu_instruction_master_address
+	wire  [14:0] cpu_instruction_master_address;                       // cpu:i_address -> mm_interconnect_0:cpu_instruction_master_address
 	wire         cpu_instruction_master_read;                          // cpu:i_read -> mm_interconnect_0:cpu_instruction_master_read
 	wire         mm_interconnect_0_uart_avalon_jtag_slave_chipselect;  // mm_interconnect_0:uart_avalon_jtag_slave_chipselect -> uart:av_chipselect
 	wire  [31:0] mm_interconnect_0_uart_avalon_jtag_slave_readdata;    // uart:av_readdata -> mm_interconnect_0:uart_avalon_jtag_slave_readdata
@@ -44,7 +44,7 @@ module project (
 	wire  [31:0] mm_interconnect_0_cpu_debug_mem_slave_writedata;      // mm_interconnect_0:cpu_debug_mem_slave_writedata -> cpu:debug_mem_slave_writedata
 	wire         mm_interconnect_0_ram_s1_chipselect;                  // mm_interconnect_0:ram_s1_chipselect -> ram:chipselect
 	wire  [31:0] mm_interconnect_0_ram_s1_readdata;                    // ram:readdata -> mm_interconnect_0:ram_s1_readdata
-	wire   [9:0] mm_interconnect_0_ram_s1_address;                     // mm_interconnect_0:ram_s1_address -> ram:address
+	wire  [10:0] mm_interconnect_0_ram_s1_address;                     // mm_interconnect_0:ram_s1_address -> ram:address
 	wire   [3:0] mm_interconnect_0_ram_s1_byteenable;                  // mm_interconnect_0:ram_s1_byteenable -> ram:byteenable
 	wire         mm_interconnect_0_ram_s1_write;                       // mm_interconnect_0:ram_s1_write -> ram:write
 	wire  [31:0] mm_interconnect_0_ram_s1_writedata;                   // mm_interconnect_0:ram_s1_writedata -> ram:writedata
@@ -199,7 +199,7 @@ module project (
 		.out_port   (sseg3_external_connection_export)       // external_connection.export
 	);
 
-	project_switch switch (
+	project_button switch (
 		.clk      (clk_clk),                              //                 clk.clk
 		.reset_n  (~rst_controller_reset_out_reset),      //               reset.reset_n
 		.address  (mm_interconnect_0_switch_s1_address),  //                  s1.address

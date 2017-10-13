@@ -1,6 +1,6 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate /home/cgomez/Downloads/Proyecto2-master/project.qsys --block-symbol-file --output-directory=/home/cgomez/Downloads/Proyecto2-master/project --family="Cyclone V" --part=5CSEMA5F31C6
-Progress: Loading Proyecto2-master/project.qsys
+Info: qsys-generate /home/cgomez/github/Proyecto2/project.qsys --block-symbol-file --output-directory=/home/cgomez/github/Proyecto2/project --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading Proyecto2/project.qsys
 Progress: Reading input file
 Progress: Adding button [altera_avalon_pio 17.0]
 Progress: Parameterizing module button
@@ -37,8 +37,8 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate /home/cgomez/Downloads/Proyecto2-master/project.qsys --synthesis=VERILOG --output-directory=/home/cgomez/Downloads/Proyecto2-master/project/synthesis --family="Cyclone V" --part=5CSEMA5F31C6
-Progress: Loading Proyecto2-master/project.qsys
+Info: qsys-generate /home/cgomez/github/Proyecto2/project.qsys --synthesis=VERILOG --output-directory=/home/cgomez/github/Proyecto2/project/synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading Proyecto2/project.qsys
 Progress: Reading input file
 Progress: Adding button [altera_avalon_pio 17.0]
 Progress: Parameterizing module button
@@ -73,28 +73,28 @@ Info: project.switch: PIO inputs are not hardwired in test bench. Undefined valu
 Info: project.uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info: project: Generating project "project" for QUARTUS_SYNTH
 Info: button: Starting RTL generation for module 'project_button'
-Info: button:   Generation command is [exec /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/perl/bin/perl -I /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/perl/lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=project_button --dir=/tmp/alt7450_2385009687181393616.dir/0001_button_gen/ --quartus_dir=/home/cgomez/intelFPGA_lite/17.0/quartus --verilog --config=/tmp/alt7450_2385009687181393616.dir/0001_button_gen//project_button_component_configuration.pl  --do_build_sim=0  ]
+Info: button:   Generation command is [exec /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/perl/bin/perl -I /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/perl/lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=project_button --dir=/tmp/alt7452_6203456724417002612.dir/0001_button_gen/ --quartus_dir=/home/cgomez/intelFPGA_lite/17.0/quartus --verilog --config=/tmp/alt7452_6203456724417002612.dir/0001_button_gen//project_button_component_configuration.pl  --do_build_sim=0  ]
 Info: button: Done RTL generation for module 'project_button'
 Info: button: "project" instantiated altera_avalon_pio "button"
 Info: cpu: "project" instantiated altera_nios2_gen2 "cpu"
 Info: led: Starting RTL generation for module 'project_led'
-Info: led:   Generation command is [exec /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/perl/bin/perl -I /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/perl/lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=project_led --dir=/tmp/alt7450_2385009687181393616.dir/0002_led_gen/ --quartus_dir=/home/cgomez/intelFPGA_lite/17.0/quartus --verilog --config=/tmp/alt7450_2385009687181393616.dir/0002_led_gen//project_led_component_configuration.pl  --do_build_sim=0  ]
+Info: led:   Generation command is [exec /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/perl/bin/perl -I /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/perl/lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=project_led --dir=/tmp/alt7452_6203456724417002612.dir/0002_led_gen/ --quartus_dir=/home/cgomez/intelFPGA_lite/17.0/quartus --verilog --config=/tmp/alt7452_6203456724417002612.dir/0002_led_gen//project_led_component_configuration.pl  --do_build_sim=0  ]
 Info: led: Done RTL generation for module 'project_led'
 Info: led: "project" instantiated altera_avalon_pio "led"
 Info: ram: Starting RTL generation for module 'project_ram'
-Info: ram:   Generation command is [exec /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/perl/bin/perl -I /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/perl/lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=project_ram --dir=/tmp/alt7450_2385009687181393616.dir/0003_ram_gen/ --quartus_dir=/home/cgomez/intelFPGA_lite/17.0/quartus --verilog --config=/tmp/alt7450_2385009687181393616.dir/0003_ram_gen//project_ram_component_configuration.pl  --do_build_sim=0  ]
+Info: ram:   Generation command is [exec /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/perl/bin/perl -I /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/perl/lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=project_ram --dir=/tmp/alt7452_6203456724417002612.dir/0003_ram_gen/ --quartus_dir=/home/cgomez/intelFPGA_lite/17.0/quartus --verilog --config=/tmp/alt7452_6203456724417002612.dir/0003_ram_gen//project_ram_component_configuration.pl  --do_build_sim=0  ]
 Info: ram: Done RTL generation for module 'project_ram'
 Info: ram: "project" instantiated altera_avalon_onchip_memory2 "ram"
 Info: switch: Starting RTL generation for module 'project_switch'
-Info: switch:   Generation command is [exec /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/perl/bin/perl -I /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/perl/lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=project_switch --dir=/tmp/alt7450_2385009687181393616.dir/0004_switch_gen/ --quartus_dir=/home/cgomez/intelFPGA_lite/17.0/quartus --verilog --config=/tmp/alt7450_2385009687181393616.dir/0004_switch_gen//project_switch_component_configuration.pl  --do_build_sim=0  ]
+Info: switch:   Generation command is [exec /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/perl/bin/perl -I /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/perl/lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=project_switch --dir=/tmp/alt7452_6203456724417002612.dir/0004_switch_gen/ --quartus_dir=/home/cgomez/intelFPGA_lite/17.0/quartus --verilog --config=/tmp/alt7452_6203456724417002612.dir/0004_switch_gen//project_switch_component_configuration.pl  --do_build_sim=0  ]
 Info: switch: Done RTL generation for module 'project_switch'
 Info: switch: "project" instantiated altera_avalon_pio "switch"
 Info: timer: Starting RTL generation for module 'project_timer'
-Info: timer:   Generation command is [exec /home/cgomez/intelFPGA_lite/17.0/quartus/linux64//perl/bin/perl -I /home/cgomez/intelFPGA_lite/17.0/quartus/linux64//perl/lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=project_timer --dir=/tmp/alt7450_2385009687181393616.dir/0005_timer_gen/ --quartus_dir=/home/cgomez/intelFPGA_lite/17.0/quartus --verilog --config=/tmp/alt7450_2385009687181393616.dir/0005_timer_gen//project_timer_component_configuration.pl  --do_build_sim=0  ]
+Info: timer:   Generation command is [exec /home/cgomez/intelFPGA_lite/17.0/quartus/linux64//perl/bin/perl -I /home/cgomez/intelFPGA_lite/17.0/quartus/linux64//perl/lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=project_timer --dir=/tmp/alt7452_6203456724417002612.dir/0005_timer_gen/ --quartus_dir=/home/cgomez/intelFPGA_lite/17.0/quartus --verilog --config=/tmp/alt7452_6203456724417002612.dir/0005_timer_gen//project_timer_component_configuration.pl  --do_build_sim=0  ]
 Info: timer: Done RTL generation for module 'project_timer'
 Info: timer: "project" instantiated altera_avalon_timer "timer"
 Info: uart: Starting RTL generation for module 'project_uart'
-Info: uart:   Generation command is [exec /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/perl/bin/perl -I /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/perl/lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=project_uart --dir=/tmp/alt7450_2385009687181393616.dir/0006_uart_gen/ --quartus_dir=/home/cgomez/intelFPGA_lite/17.0/quartus --verilog --config=/tmp/alt7450_2385009687181393616.dir/0006_uart_gen//project_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: uart:   Generation command is [exec /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/perl/bin/perl -I /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/perl/lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=project_uart --dir=/tmp/alt7452_6203456724417002612.dir/0006_uart_gen/ --quartus_dir=/home/cgomez/intelFPGA_lite/17.0/quartus --verilog --config=/tmp/alt7452_6203456724417002612.dir/0006_uart_gen//project_uart_component_configuration.pl  --do_build_sim=0  ]
 Info: uart: Done RTL generation for module 'project_uart'
 Info: uart: "project" instantiated altera_avalon_jtag_uart "uart"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -112,19 +112,19 @@ Info: mm_interconnect_0: "project" instantiated altera_mm_interconnect "mm_inter
 Info: irq_mapper: "project" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "project" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'project_cpu_cpu'
-Info: cpu:   Generation command is [exec /home/cgomez/intelFPGA_lite/17.0/quartus/linux64//eperlcmd -I /home/cgomez/intelFPGA_lite/17.0/quartus/linux64//perl/lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=project_cpu_cpu --dir=/tmp/alt7450_2385009687181393616.dir/0009_cpu_gen/ --quartus_bindir=/home/cgomez/intelFPGA_lite/17.0/quartus/linux64/ --verilog --config=/tmp/alt7450_2385009687181393616.dir/0009_cpu_gen//project_cpu_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2017.10.11 11:22:20 (*) Starting Nios II generation
-Info: cpu: # 2017.10.11 11:22:20 (*)   Checking for plaintext license.
-Info: cpu: # 2017.10.11 11:22:21 (*)   Couldn't query license setup in Quartus directory /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/
-Info: cpu: # 2017.10.11 11:22:21 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2017.10.11 11:22:21 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2017.10.11 11:22:21 (*)   Plaintext license not found.
-Info: cpu: # 2017.10.11 11:22:21 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2017.10.11 11:22:21 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2017.10.11 11:22:21 (*)   Creating all objects for CPU
-Info: cpu: # 2017.10.11 11:22:24 (*)   Generating RTL from CPU objects
-Info: cpu: # 2017.10.11 11:22:24 (*)   Creating plain-text RTL
-Info: cpu: # 2017.10.11 11:22:25 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec /home/cgomez/intelFPGA_lite/17.0/quartus/linux64//eperlcmd -I /home/cgomez/intelFPGA_lite/17.0/quartus/linux64//perl/lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/europa -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin/perl_lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/sopc_builder/bin -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/cgomez/intelFPGA_lite/17.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=project_cpu_cpu --dir=/tmp/alt7452_6203456724417002612.dir/0009_cpu_gen/ --quartus_bindir=/home/cgomez/intelFPGA_lite/17.0/quartus/linux64/ --verilog --config=/tmp/alt7452_6203456724417002612.dir/0009_cpu_gen//project_cpu_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2017.10.13 11:26:05 (*) Starting Nios II generation
+Info: cpu: # 2017.10.13 11:26:05 (*)   Checking for plaintext license.
+Info: cpu: # 2017.10.13 11:26:06 (*)   Couldn't query license setup in Quartus directory /home/cgomez/intelFPGA_lite/17.0/quartus/linux64/
+Info: cpu: # 2017.10.13 11:26:06 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2017.10.13 11:26:06 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2017.10.13 11:26:07 (*)   Plaintext license not found.
+Info: cpu: # 2017.10.13 11:26:07 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2017.10.13 11:26:07 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2017.10.13 11:26:07 (*)   Creating all objects for CPU
+Info: cpu: # 2017.10.13 11:26:08 (*)   Generating RTL from CPU objects
+Info: cpu: # 2017.10.13 11:26:08 (*)   Creating plain-text RTL
+Info: cpu: # 2017.10.13 11:26:09 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'project_cpu_cpu'
 Info: cpu: "cpu" instantiated altera_nios2_gen2_unit "cpu"
 Info: cpu_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "cpu_data_master_translator"
@@ -140,12 +140,12 @@ Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "c
 Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
-Info: Reusing file /home/cgomez/Downloads/Proyecto2-master/project/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/cgomez/github/Proyecto2/project/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file /home/cgomez/Downloads/Proyecto2-master/project/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/cgomez/github/Proyecto2/project/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
-Info: Reusing file /home/cgomez/Downloads/Proyecto2-master/project/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/cgomez/github/Proyecto2/project/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
 Info: project: Done "project" with 30 modules, 43 files

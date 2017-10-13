@@ -10,7 +10,7 @@ module project (
 	sseg3_external_connection_export,
 	switch_external_connection_export);	
 
-	input	[3:0]	button_external_connection_export;
+	input	[2:0]	button_external_connection_export;
 	input		clk_clk;
 	output	[7:0]	led_external_connection_export;
 	input		reset_reset_n;

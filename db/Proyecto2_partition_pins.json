@@ -194,10 +194,6 @@
 				{
 					"name" : "switch_external_connection_export[2]",
 					"strict" : false
-				},
-				{
-					"name" : "button_external_connection_export[3]",
-					"strict" : false
 				}
 			]
 		}
