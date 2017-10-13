@@ -86,14 +86,17 @@
 
 
 
-char * TIMER = (int*) 0x1800;
-char * SSEG0 = (int*) 0x1820;
-char * SSEG1 = (int*) 0x1830;
-char * SSEG2 = (int*) 0x1840;
-char * SSEG3 = (int*) 0x1850;
-char * SWITCHES = (int*) 0x1860;
-char * LEDS = (int*) 0x1870;
-char * BUTTON = (int*) 0x1880;
+int * TIMER = (int*) 0x1800;
+int * PH = (int*) 0x180b;
+int * PL = (int *) 0x1808;
+int * TC = (int *) 0x1804;
+int * SSEG0 = (int*) 0x1820;
+int * SSEG1 = (int*) 0x1830;
+int * SSEG2 = (int*) 0x1840;
+int * SSEG3 = (int*) 0x1850;
+int * SWITCHES = (int*) 0x1860;
+int * LEDS = (int*) 0x1870;
+int * BUTTON = (int*) 0x1880;
 
 int minutos = 0;
 int minutos2 = 0;
@@ -105,11 +108,13 @@ int aminutos = 0;
 int aminutos2 = 0;
 int ahoras = 0;
 int ahoras2 = 0;
+int register1;
 
-static void irqhandler (void * context, alt_u32 id){
+static void irqhandler (void * context){
 minutos=minutos + 1;
 *LEDS=0xff;
-IOWR_16DIRECT(TIMER_BASE, 0, 0); // reset request
+DECO();
+*TIMER=0b0;// reset request
 }
 
 void SDECO(){
@@ -463,8 +468,18 @@ void DECO(){
 
 int main()
 {
-  alt_irq_ic_register(TIMER_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_IRQ,(void*)irqhandler,NULL,0x0);
+	*TIMER=0xf5;
+  volatile int context;
+ //IOWR_ALTERA_AVALON_TIMER_PERIODL(TIMER_BASE, 0xf080);
+ *PL=0xf080;
+ //IOWR_ALTERA_AVALON_TIMER_PERIODH(TIMER_BASE, 0x2fa);
+ *PH = 0x2fa;
+ //IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_BASE, 7);
+ *TC = 0x7;
+ alt_irq_register(TIMER_IRQ, (void*)&context, irqhandler);
+  //alt_ic_isr_register(TIMER_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_IRQ,irqhandler,NULL,0x0);
   while (1){
+  	*LEDS=*TIMER;
 	  if(*SWITCHES==0x6){
 		  SDECO();
 		  if(*BUTTON==0x7){
