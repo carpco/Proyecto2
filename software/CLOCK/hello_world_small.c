@@ -80,7 +80,6 @@
 
 #include "system.h"
 #include <sys/alt_irq.h>
-#include "altera_avalon_timer_regs.h"	//for timer
 #include <io.h>
 #include <alt_types.h>
 
@@ -108,12 +107,10 @@ int aminutos = 0;
 int aminutos2 = 0;
 int ahoras = 0;
 int ahoras2 = 0;
-int register1;
+int mask;
 
 static void irqhandler (void * context){
 minutos=minutos + 1;
-*LEDS=0xff;
-DECO();
 *TIMER=0b0;// reset request
 }
 
@@ -479,16 +476,24 @@ int main()
  alt_irq_register(TIMER_IRQ, (void*)&context, irqhandler);
   //alt_ic_isr_register(TIMER_IRQ_INTERRUPT_CONTROLLER_ID,TIMER_IRQ,irqhandler,NULL,0x0);
   while (1){
-  	*LEDS=*TIMER;
+
 	  if(*SWITCHES==0x6){
 		  SDECO();
 		  if(*BUTTON==0x7){
-			  horas=horas+1;
+			  mask=mask+1;
+			  horas=mask/10000 + horas;
 			  SDECO();
+			  if (mask>=11000){
+			  	mask=0;
+			  }
 		  }
 		  else if(*BUTTON==0xb){
-			  minutos=minutos+1;
+			  mask=mask+1;
+			  minutos=mask/10000 + minutos;
 			  SDECO();
+			  if (mask>=11000){
+			  	mask=0;
+			  }
 		  }
 	  }
 	  else if(*SWITCHES==0x5){
